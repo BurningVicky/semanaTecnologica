@@ -12,7 +12,7 @@ export function Participantes() {
       empresa: 'Tech Company',
       tema: 'Inteligência Artificial: O Futuro é Agora',
       bio: 'Biografia do palestrante será adicionada em breve.',
-      image: '/semanaTecnologica/img/palestraPlaceholder.png',
+      image: '/semanaTecnologica/public/img/palestraPlaceholder.png',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -25,7 +25,7 @@ export function Participantes() {
       empresa: 'Web Solutions',
       tema: 'Desenvolvimento Web Moderno',
       bio: 'Biografia do palestrante será adicionada em breve.',
-      image: '/semanaTecnologica/img/palestraPlaceholder.png',
+      image: '/semanaTecnologica/public/img/palestraPlaceholder.png',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -38,7 +38,7 @@ export function Participantes() {
       empresa: 'CyberSec Corp',
       tema: 'CyberSecurity 2025',
       bio: 'Biografia do palestrante será adicionada em breve.',
-      image: '/semanaTecnologica/img/palestraPlaceholder.png',
+      image: '/semanaTecnologica/public/img/palestraPlaceholder.png',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -51,7 +51,7 @@ export function Participantes() {
       empresa: 'CloudTech',
       tema: 'Cloud Computing e DevOps',
       bio: 'Biografia do palestrante será adicionada em breve.',
-      image: '/semanaTecnologica/img/palestraPlaceholder.png',
+      image: '/semanaTecnologica/public/img/palestraPlaceholder.png',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -64,7 +64,7 @@ export function Participantes() {
       empresa: 'Design Studio',
       tema: 'UX/UI Design: Criando Experiências',
       bio: 'Biografia do palestrante será adicionada em breve.',
-      image: '/semanaTecnologica/img/palestraPlaceholder.png',
+      image: '/semanaTecnologica/public/img/palestraPlaceholder.png',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -77,7 +77,7 @@ export function Participantes() {
       empresa: 'Crypto Solutions',
       tema: 'Blockchain e Criptomoedas',
       bio: 'Biografia do palestrante será adicionada em breve.',
-      image: '/semanaTecnologica/img/palestraPlaceholder.png',
+      image: '/semanaTecnologica/public/img/palestraPlaceholder.png',
       social: {
         linkedin: '#',
         twitter: '#',
