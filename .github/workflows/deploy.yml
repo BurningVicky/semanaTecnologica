@@ -3,7 +3,7 @@ name: Deploy React Vite
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build-and-deploy:
