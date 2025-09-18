@@ -60,7 +60,7 @@ export function Hero() {
           <div className="relative">
             <div className="relative z-10">
               <ImageWithFallback 
-                src="public/img/animeCharMetaVR.jpg"
+                src="https://images.unsplash.com/photo-1715866558475-d2543c67a840?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx8fDE3NTc3MDI3NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
                 alt="Pessoa usando VR"
                 className="w-full h-auto rounded-lg shadow-2xl"
               />
