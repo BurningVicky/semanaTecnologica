@@ -1,4 +1,5 @@
-Semana Tecnológica
+# Semana Tecnológica
+
 A Semana Tecnológica é o maior evento de tecnologia da região sul do Brasil, focado em reunir entusiastas, estudantes e profissionais para palestras, workshops e networking de alto nível. Este projeto representa o site oficial do evento, criado para fornecer todas as informações necessárias sobre a programação, palestrantes e localização, além de permitir inscrições e interação.
 
 💻 Tecnologias Utilizadas
