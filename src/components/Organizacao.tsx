@@ -11,7 +11,7 @@ export function Organizacao() {
       email: '@ucpel.edu.br',
       linkedin: '#',
       bio: 'Lorem.',
-      image: '/semanaTecnologica/public/img/palestraPlaceholder.png'
+      image: '/semanaTecnologica/img/palestraPlaceholder.png'
     },
     {
       nome: 'Profª. Lorem',
@@ -20,7 +20,7 @@ export function Organizacao() {
       email: '@ucpel.edu.br',
       linkedin: '#',
       bio: 'Lorem.',
-      image: '/semanaTecnologica/public/img/palestraPlaceholder.png'
+      image: '/semanaTecnologica/img/palestraPlaceholder.png'
     },
     {
       nome: 'Prof. Lorem',
@@ -29,7 +29,7 @@ export function Organizacao() {
       email: '@ucpel.edu.br',
       linkedin: '#',
       bio: 'Lorem.',
-      image: '/semanaTecnologica/public/img/palestraPlaceholder.png'
+      image: '/semanaTecnologica/img/palestraPlaceholder.png'
     },
     {
       nome: 'Profª. Lorem',
@@ -38,7 +38,7 @@ export function Organizacao() {
       email: '@ucpel.edu.br',
       linkedin: '#',
       bio: 'Lorem.',
-      image: '/semanaTecnologica/public/img/palestraPlaceholder.png'
+      image: '/semanaTecnologica/img/palestraPlaceholder.png'
     }
   ];
 

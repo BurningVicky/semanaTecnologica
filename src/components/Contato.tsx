@@ -182,7 +182,7 @@ export function Contato() {
             <CardContent>
               <div className="aspect-w-16 aspect-h-9">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.849446106952!2d-52.34363682437834!3d-31.77459197409863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59569451f1b%3A0x2512d7bca00e1ed0!2sUniversidade%20Cat%C3%B3lica%20de%20Pelotas%20-%20UCPEL%2C%20Campus%20I!5e0!3m2!1spt-BR!2sbr!4v1757709719599!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.849446106952!2d-52.34363682437834!3d-31.77459197409863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59569451f1b%3A0x2512d7bca00e1ed0!2sUniversidade%20Cat%C3%B3lica%20de%20Pelotas%20-%20UCPEL%2C%20Campus%20I!5e0!3m2!1spt-BR!2sbr!4v1757709719599!5m2!1spt-BR!2sbr"
                   width="100%"
                   height="400"
                   style={{ border: 0 }}
