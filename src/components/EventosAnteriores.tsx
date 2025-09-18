@@ -38,7 +38,7 @@ export function EventosAnteriores() {
         'Tendências e Desafios em Tecnologia na Era do Tudo Conectado',
         'Mesa Redonda: Os avanços tecnológicos na Engenharia'
       ],
-      imagem: '/semanaTecnologica/img/evento2024.png',
+      imagem: `${import.meta.env.BASE_URL}img/evento2024.png` ,
       link: 'https://st2024ucpel.exehda.org/doku.php?id=start'
     },
     {
@@ -54,7 +54,7 @@ export function EventosAnteriores() {
         'Minicurso: Fundamentos de Impressão 3D',
         'Segurança em Sistemas Embarcados: problemas, soluções e perspectivas'
       ],
-      imagem: '/semanaTecnologica/img/evento2023.png',
+      imagem: `${import.meta.env.BASE_URL}img/evento2023.png` ,
       link: 'http://olaria.ucpel.edu.br/st2023/doku.php'
     }
   ];
