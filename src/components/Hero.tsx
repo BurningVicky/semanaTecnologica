@@ -9,7 +9,7 @@ export function Hero() {
       {/* Background Pattern */}
       <div className="absolute inset-0">
         <ImageWithFallback 
-          src="src/public/img/techBg1.png"
+          src="/semanaTecnologica/img/techBg1.png"
           alt="Tech Background"
           className="w-full h-full object-cover"
         />
@@ -58,7 +58,7 @@ export function Hero() {
               <Button 
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-3"
-                onClick={() => window.open('https://forms.google.com', '_blank')}
+                onClick={() => window.open('https://forms.gle/TGJ6ErsBtDmYqmp66', '_blank')}
               >
                 Inscreva-se Gratuitamente
               </Button>
@@ -89,8 +89,8 @@ export function Hero() {
               transition={{ duration: 0.3 }}
             >
               <ImageWithFallback 
-                src="src/public/img/animeCharMetaVR.jpg"
-                alt="Mulher utilizando um VR em um mundo Synthwave"
+                src="/semanaTecnologica/img/animeCharMetaVRLG.jpg"
+                alt="Mulher utilizando equipamento VR em um mundo Synthwave"
                  className="w-full h-auto rounded-lg shadow-2xl transition-all duration-300 hover:opacity-50 opacity-100"
               />
             </motion.div>

@@ -5,44 +5,40 @@ import { Mail, Phone, LinkedinIcon } from 'lucide-react';
 export function Organizacao() {
   const organizadores = [
     {
-      nome: 'Prof. Dr. João Silva',
-      cargo: 'Coordenador Geral',
+      nome: 'Profª. Dra. Morgana Macedo',
+      cargo: 'Coordenadora Geral',
       departamento: 'Ciência da Computação',
-      email: 'joao.silva@ucpel.edu.br',
-      telefone: '(53) 2123-8800',
+      email: '@ucpel.edu.br',
       linkedin: '#',
-      bio: 'Professor titular com mais de 15 anos de experiência em tecnologia e coordenador de eventos acadêmicos.',
-      image: 'https://images.unsplash.com/photo-1691026336764-f24456f76e03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx8fDE3NTc3MDI3NzF8MA&ixlib=rb-4.1.0&q=80&w=1080'
+      bio: 'Lorem.',
+      image: '/semanaTecnologica/public/img/palestraPlaceholder.png'
     },
     {
-      nome: 'Profª. Msc. Maria Santos',
+      nome: 'Profª. Lorem',
       cargo: 'Vice-Coordenadora',
-      departamento: 'Sistemas de Informação',
-      email: 'maria.santos@ucpel.edu.br',
-      telefone: '(53) 2123-8801',
+      departamento: 'Sistemas',
+      email: '@ucpel.edu.br',
       linkedin: '#',
-      bio: 'Especialista em gestão de projetos tecnológicos e desenvolvimento de software.',
-      image: 'https://images.unsplash.com/photo-1691026336764-f24456f76e03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx8fDE3NTc3MDI3NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080'
+      bio: 'Lorem.',
+      image: '/semanaTecnologica/public/img/palestraPlaceholder.png'
     },
     {
-      nome: 'Prof. Dr. Carlos Oliveira',
-      cargo: 'Coordenador de Palestras',
+      nome: 'Prof. Lorem',
+      cargo: 'Coordenador x',
       departamento: 'Engenharia de Software',
-      email: 'carlos.oliveira@ucpel.edu.br',
-      telefone: '(53) 2123-8802',
+      email: '@ucpel.edu.br',
       linkedin: '#',
-      bio: 'Doutor em Engenharia de Software com foco em metodologias ágeis e DevOps.',
-      image: 'https://images.unsplash.com/photo-1691026336764-f24456f76e03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx8fDE3NTc3MDI3NzN8MA&ixlib=rb-4.1.0&q=80&w=1080'
+      bio: 'Lorem.',
+      image: '/semanaTecnologica/public/img/palestraPlaceholder.png'
     },
     {
-      nome: 'Profª. Ana Costa',
-      cargo: 'Coordenadora de Logistics',
-      departamento: 'Administração',
-      email: 'ana.costa@ucpel.edu.br',
-      telefone: '(53) 2123-8803',
+      nome: 'Profª. Lorem',
+      cargo: 'Coordenadora',
+      departamento: 'Lorem',
+      email: '@ucpel.edu.br',
       linkedin: '#',
-      bio: 'Especialista em gestão de eventos e coordenação logística de grandes projetos.',
-      image: 'https://images.unsplash.com/photo-1691026336764-f24456f76e03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx8fDE3NTc3MDI3NzR8MA&ixlib=rb-4.1.0&q=80&w=1080'
+      bio: 'Lorem.',
+      image: '/semanaTecnologica/public/img/palestraPlaceholder.png'
     }
   ];
 
@@ -50,22 +46,22 @@ export function Organizacao() {
     {
       nome: 'Universidade Católica de Pelotas',
       tipo: 'Organizadora Principal',
-      logo: '/api/placeholder/200/100'
+      logo: '#'
     },
     {
-      nome: 'Prefeitura de Pelotas',
+      nome: 'Lorem',
       tipo: 'Apoio Institucional',
-      logo: '/api/placeholder/200/100'
+      logo: '#'
     },
     {
-      nome: 'Federação das Indústrias',
+      nome: 'Lorem',
       tipo: 'Parceira',
-      logo: '/api/placeholder/200/100'
+      logo: '#'
     },
     {
-      nome: 'SEBRAE RS',
+      nome: 'Lorem',
       tipo: 'Apoio',
-      logo: '/api/placeholder/200/100'
+      logo: '#'
     }
   ];
 

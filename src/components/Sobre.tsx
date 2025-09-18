@@ -16,7 +16,7 @@ export function Sobre() {
     {
       icon: <Award className="h-8 w-8 text-green-600" />,
       title: 'Certificação',
-      description: 'Certificado de participação para todos os inscritos.'
+      description: 'Certificado de participação para todos os inscritos com presença mínima confirmada.'
     },
     {
       icon: <Globe className="h-8 w-8 text-indigo-600" />,
@@ -31,10 +31,8 @@ export function Sobre() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Sobre o Evento</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A Semana Tecnológica da UCPEL é um evento anual que reúne estudantes, profissionais 
-            e empresas para discutir as últimas tendências em tecnologia, inovação e 
-            empreendedorismo digital.
-          </p>
+             A 11ª Semana Tecnológica da UCPEL, promovida pelos cursos do Centro de Ciências Sociais e Tecnológicas, será realizada entre os dias 11 e 14 de novembro de 2025. A abertura ocorrerá no dia 11, na sala C249 da Universidade Católica de Pelotas, e as demais atividades noturnas serão transmitidas pela plataforma Google Meet.
+          </p>          
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -51,8 +49,13 @@ export function Sobre() {
           ))}
         </div>
 
-        <div className="bg-white rounded-lg p-8 shadow-md">
-          <h3 className="text-2xl font-semibold mb-6">O que esperar?</h3>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto pb-12">
+                Os minicursos da tarde serão presenciais, em laboratórios definidos na programação.
+                O evento tem como objetivo reunir estudantes, pesquisadores e profissionais para discutir avanços tecnológicos e inovações em inteligência artificial, consolidando-se como espaço de integração acadêmica e científica.
+              </p>
+
+        <div className="bg-white rounded-lg p-8 shadow-md pt-12">
+          <h3 className="text-2xl font-semibold mb-6 pt-12">O que esperar?</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h4 className="text-lg font-semibold mb-4 text-blue-600">Palestras Inspiradoras</h4>

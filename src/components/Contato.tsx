@@ -117,7 +117,7 @@ export function Contato() {
                   <Mail className="text-blue-600 mt-1" size={20} />
                   <div>
                     <h4 className="font-semibold">Email</h4>
-                    <p className="text-gray-600">semana.tecnologica@ucpel.edu.br</p>
+                    <p className="text-gray-600">semanatecnologica@ucpel.edu.br</p>
                     <p className="text-sm text-gray-500">Resposta em até 24 horas</p>
                   </div>
                 </div>
@@ -126,7 +126,7 @@ export function Contato() {
                   <Phone className="text-green-600 mt-1" size={20} />
                   <div>
                     <h4 className="font-semibold">Telefone</h4>
-                    <p className="text-gray-600">(53) 2123-8800</p>
+                    <p className="text-gray-600">(53) 32123-3322</p>
                     <p className="text-sm text-gray-500">Segunda a sexta, 8h às 18h</p>
                   </div>
                 </div>
@@ -135,9 +135,9 @@ export function Contato() {
                   <MapPin className="text-red-600 mt-1" size={20} />
                   <div>
                     <h4 className="font-semibold">Endereço</h4>
-                    <p className="text-gray-600">Rua Félix da Cunha, 412</p>
+                    <p className="text-gray-600">Rua Gonçalves Chaves, 373</p>
                     <p className="text-gray-600">Centro - Pelotas/RS</p>
-                    <p className="text-gray-600">CEP: 96010-000</p>
+                    <p className="text-gray-600">CEP: 96015-560</p>
                   </div>
                 </div>
               </CardContent>
@@ -151,19 +151,19 @@ export function Contato() {
               <CardContent>
                 <p className="text-gray-600 mb-4">Siga-nos nas redes sociais para ficar por dentro de todas as novidades:</p>
                 <div className="grid grid-cols-2 gap-4">
-                  <a href="#" className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                  <a href="https://www.facebook.com/UCPel" target="__blank" className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
                     <Facebook className="text-blue-600" size={20} />
                     <span className="text-blue-600">Facebook</span>
                   </a>
-                  <a href="#" className="flex items-center space-x-3 p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                  <a href="https://www.instagram.com/ucpel" target="__blank"className="flex items-center space-x-3 p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
                     <Instagram className="text-pink-600" size={20} />
                     <span className="text-pink-600">Instagram</span>
                   </a>
-                  <a href="#" className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                  <a href="https://www.linkedin.com/school/ucpel/posts/?feedView=all" target="__blank" className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
                     <Linkedin className="text-blue-700" size={20} />
                     <span className="text-blue-700">LinkedIn</span>
                   </a>
-                  <a href="#" className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                  <a href="https://x.com/ucpel" target="__blank" className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
                     <Twitter className="text-blue-500" size={20} />
                     <span className="text-blue-500">Twitter</span>
                   </a>
@@ -182,7 +182,7 @@ export function Contato() {
             <CardContent>
               <div className="aspect-w-16 aspect-h-9">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.849446106952!2d-52.34363682437834!3d-31.77459197409863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59569451f1b%3A0x2512d7bca00e1ed0!2sUniversidade%20Cat%C3%B3lica%20de%20Pelotas%20-%20UCPEL%2C%20Campus%20I!5e0!3m2!1spt-BR!2sbr!4v1757709719599!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.849446106952!2d-52.34363682437834!3d-31.77459197409863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b59569451f1b%3A0x2512d7bca00e1ed0!2sUniversidade%20Cat%C3%B3lica%20de%20Pelotas%20-%20UCPEL%2C%20Campus%20I!5e0!3m2!1spt-BR!2sbr!4v1757709719599!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
                   width="100%"
                   height="400"
                   style={{ border: 0 }}

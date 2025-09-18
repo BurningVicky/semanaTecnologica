@@ -13,7 +13,7 @@ export function EventosAnteriores() {
     { id: 3, titulo: 'Workshop DevOps', descricao: 'Sessão prática de desenvolvimento e operações' },
     { id: 4, titulo: 'Networking Coffee', descricao: 'Momento de interação entre participantes' },
     { id: 5, titulo: 'Mesa Redonda', descricao: 'Discussão sobre futuro da tecnologia' },
-    { id: 6, titulo: 'Encerramento 2024', descricao: 'Cerimônia de encerramento e premiação' }
+    { id: 6, titulo: 'Encerramento 2024', descricao: 'Cerimônia de encerramento' }
   ];
 
   const nextSlide = () => {
@@ -27,43 +27,43 @@ export function EventosAnteriores() {
   const eventosAnteriores = [
     {
       ano: '2024',
-      titulo: 'Semana Tecnológica 2024: IA e Futuro',
-      data: '15-18 de Novembro',
-      participantes: '500+',
-      palestras: '12',
+      titulo: 'Semana Tecnológica 2024: Reflexões e Perspectivas da Inteligência Artificial para a Próxima Geração',
+      data: '11-14 de Novembro',
+      participantes: 'x00+',
+      palestras: '4',
       descricao: 'Evento focado em Inteligência Artificial, Machine Learning e suas aplicações no mercado de trabalho.',
       highlights: [
-        'Palestras sobre ChatGPT e IA Generativa',
-        'Workshop de Python para Data Science',
-        'Mesa redonda sobre ética em IA',
-        'Feira de estágios em tech'
+        'Reflexões e Perspectivas da Inteligência Artificial para a Próxima Geração',
+        'Do matchmaking para a educação: o que jogos nos ensinam sobre aprendizagem',
+        'Tendências e Desafios em Tecnologia na Era do Tudo Conectado',
+        'Mesa Redonda: Os avanços tecnológicos na Engenharia'
       ],
-      imagem: 'https://images.unsplash.com/photo-1748767358264-8254666bb119?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNoJTIwYmFja2dyb3VuZCUyMGFic3RyYWN0fGVufDF8fHx8MTc1NzcwMjc4MXww&ixlib=rb-4.1.0&q=80&w=1080',
-      link: 'https://ucpel.edu.br/eventos/semana-tecnologica-2024'
+      imagem: '/semanaTecnologica/public/img/evento2024.png',
+      link: 'https://st2024ucpel.exehda.org/doku.php?id=start'
     },
     {
       ano: '2023',
-      titulo: 'Semana Tecnológica 2023: Transformação Digital',
-      data: '13-16 de Novembro',
-      participantes: '450+',
-      palestras: '10',
-      descricao: 'Edição dedicada à transformação digital nas empresas e o impacto das novas tecnologias.',
+      titulo: 'Semana Tecnológica 2023: Serviço às Pessoas e à Sociedade',
+      data: '06-09 de Novembro',
+      participantes: 'x00+',
+      palestras: '8',
+      descricao: 'Edição dedicada à transformação digital à serviço das pessoas e da sociedade.',
       highlights: [
-        'Cloud Computing e AWS',
-        'Desenvolvimento Mobile com React Native',
-        'Segurança da Informação',
-        'Startup Pitch Competition'
+        'Empreendedorismo: o modelo de negócio para incubação de empresas',
+        'Inovações tecnológicas na área da saúde: Equipamentos médico-hospitalares',
+        'Minicurso: Fundamentos de Impressão 3D',
+        'Segurança em Sistemas Embarcados: problemas, soluções e perspectivas'
       ],
-      imagem: 'https://images.unsplash.com/photo-1748767358264-8254666bb119?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNoJTIwYmFja2dyb3VuZCUyMGFic3RyYWN0fGVufDF8fHx8MTc1NzcwMjc4MXwx&ixlib=rb-4.1.0&q=80&w=1080',
-      link: 'https://ucpel.edu.br/eventos/semana-tecnologica-2023'
+      imagem: '/semanaTecnologica/public/img/evento2023.png',
+      link: 'http://olaria.ucpel.edu.br/st2023/doku.php'
     }
   ];
 
   const estatisticas = {
-    totalParticipantes: '950+',
-    totalPalestras: '50+',
+    totalParticipantes: 'x00+',
+    totalPalestras: 'xx+',
     totalEdicoes: '10',
-    satisfacao: '98%'
+    satisfacao: '99%'
   };
 
   return (
@@ -232,7 +232,7 @@ export function EventosAnteriores() {
             <Button 
               size="lg"
               className="bg-white/10 border-2 border-white text-white hover:bg-white hover:text-blue-900 backdrop-blur-sm"
-              onClick={() => window.open('https://forms.google.com', '_blank')}
+              onClick={() => window.open('https://forms.gle/TGJ6ErsBtDmYqmp66', '_blank')}
             >
               Inscreva-se Agora
             </Button>

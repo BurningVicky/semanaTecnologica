@@ -11,10 +11,10 @@ export function Footer() {
   ];
 
   const sponsors = [
-    { nome: 'TechCorp', tipo: 'Patrocinador Ouro' },
-    { nome: 'DevSolutions', tipo: 'Patrocinador Prata' },
-    { nome: 'CloudTech', tipo: 'Patrocinador Bronze' },
-    { nome: 'StartupHub', tipo: 'Apoiador' }
+    { nome: 'UCPEL', tipo: 'Patrocinador Ouro' },
+    { nome: 'Lorem', tipo: 'Patrocinador Prata' },
+    { nome: 'Lorem', tipo: 'Patrocinador Bronze' },
+    { nome: 'Lorem', tipo: 'Apoiador' }
   ];
 
   return (
@@ -33,15 +33,15 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-blue-400" />
-                <span className="text-sm">semana.tecnologica@ucpel.edu.br</span>
+                <span className="text-sm">semanatecnologica@ucpel.edu.br</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={16} className="text-green-400" />
-                <span className="text-sm">(53) 2123-8800</span>
+                <span className="text-sm">(53) 32123-3322</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin size={16} className="text-red-400" />
-                <span className="text-sm">Rua Félix da Cunha, 412 - Pelotas/RS</span>
+                <span className="text-sm">Rua Gonçalves Chaves, 373 - Pelotas/RS</span>
               </div>
             </div>
           </div>
@@ -83,16 +83,16 @@ export function Footer() {
               Siga-nos para ficar por dentro de todas as novidades do evento.
             </p>
             <div className="flex space-x-4 mb-6">
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="https://www.facebook.com/UCPel" target="__blank" className="text-gray-300 hover:text-blue-400 transition-colors">
                 <Facebook size={24} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-pink-400 transition-colors">
+              <a href="https://www.instagram.com/ucpel" target="__blank" className="text-gray-300 hover:text-pink-400 transition-colors">
                 <Instagram size={24} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="https://www.linkedin.com/school/ucpel/posts/?feedView=all" target="__blank"  className="text-gray-300 hover:text-blue-400 transition-colors">
                 <Linkedin size={24} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="https://x.com/ucpel" target="__blank"  className="text-gray-300 hover:text-blue-400 transition-colors">
                 <Twitter size={24} />
               </a>
             </div>
@@ -124,7 +124,7 @@ export function Footer() {
             <div className="flex items-center space-x-2 text-gray-300">
               <span>Made with</span>
               <Heart size={16} className="text-red-500 fill-current" />
-              <span>at UCPEL</span>
+              <a href="https://www.ucpel.edu.br" target="__blank" className="text-gray-300 hover:text-blue-400 transition-colors">at UCPEL</a>
             </div>
           </div>
         </div>

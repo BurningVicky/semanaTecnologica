@@ -33,7 +33,7 @@ export function Header() {
           >
               <a href="/" className="block">
                 <img 
-                src="src/public/img/ucpelLogo.png" 
+                src="/semanaTecnologica/img/ucpelLogo.png" 
                 alt="Logo UCPEL" 
                 className="h-10 w-auto object-contain"
                 />
@@ -87,7 +87,7 @@ export function Header() {
             >
               <Button 
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg"
-                onClick={() => window.open('https://forms.google.com', '_blank')}
+                onClick={() => window.open('https://forms.gle/TGJ6ErsBtDmYqmp66', '_blank')}
               >
                 Inscreva-se
               </Button>

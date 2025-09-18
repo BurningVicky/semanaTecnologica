@@ -4,7 +4,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 import { LinkedinIcon, TwitterIcon, Globe } from 'lucide-react';
 
 export function Participantes() {
-  // Skeleton para participantes - será preenchido posteriormente
+  // Skeleton para participantes
   const participantes = [
     {
       nome: 'A ser confirmado',
@@ -12,7 +12,7 @@ export function Participantes() {
       empresa: 'Tech Company',
       tema: 'Inteligência Artificial: O Futuro é Agora',
       bio: 'Biografia do palestrante será adicionada em breve.',
-      image: 'https://images.unsplash.com/photo-1691026336764-f24456f76e03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx8fDE3NTc3MDI3Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/semanaTecnologica/public/img/palestraPlaceholder.png',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -25,7 +25,7 @@ export function Participantes() {
       empresa: 'Web Solutions',
       tema: 'Desenvolvimento Web Moderno',
       bio: 'Biografia do palestrante será adicionada em breve.',
-      image: 'https://images.unsplash.com/photo-1691026336764-f24456f76e03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx8fDE3NTc3MDI3NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/semanaTecnologica/public/img/palestraPlaceholder.png',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -36,9 +36,9 @@ export function Participantes() {
       nome: 'A ser confirmado',
       cargo: 'Especialista em Segurança',
       empresa: 'CyberSec Corp',
-      tema: 'Segurança Cibernética em 2025',
+      tema: 'CyberSecurity 2025',
       bio: 'Biografia do palestrante será adicionada em breve.',
-      image: 'https://images.unsplash.com/photo-1691026336764-f24456f76e03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx8fDE3NTc3MDI3NzN8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/semanaTecnologica/public/img/palestraPlaceholder.png',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -51,7 +51,7 @@ export function Participantes() {
       empresa: 'CloudTech',
       tema: 'Cloud Computing e DevOps',
       bio: 'Biografia do palestrante será adicionada em breve.',
-      image: 'https://images.unsplash.com/photo-1691026336764-f24456f76e03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx8fDE3NTc3MDI3NzR8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/semanaTecnologica/public/img/palestraPlaceholder.png',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -64,7 +64,7 @@ export function Participantes() {
       empresa: 'Design Studio',
       tema: 'UX/UI Design: Criando Experiências',
       bio: 'Biografia do palestrante será adicionada em breve.',
-      image: 'https://images.unsplash.com/photo-1691026336764-f24456f76e03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx8fDE3NTc3MDI3NzV8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/semanaTecnologica/public/img/palestraPlaceholder.png',
       social: {
         linkedin: '#',
         twitter: '#',
@@ -77,7 +77,7 @@ export function Participantes() {
       empresa: 'Crypto Solutions',
       tema: 'Blockchain e Criptomoedas',
       bio: 'Biografia do palestrante será adicionada em breve.',
-      image: 'https://images.unsplash.com/photo-1691026336764-f24456f76e03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx8fDE3NTc3MDI3NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/semanaTecnologica/public/img/palestraPlaceholder.png',
       social: {
         linkedin: '#',
         twitter: '#',
