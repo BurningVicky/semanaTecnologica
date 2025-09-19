@@ -1,33 +1,19 @@
-import { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Label } from './ui/label';
 import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, Twitter } from 'lucide-react';
+import { Toaster, toast } from 'sonner';
 
 export function Contato() {
-  const [formData, setFormData] = useState({
-    nome: '',
-    email: '',
-    assunto: '',
-    mensagem: ''
-  });
+  const [state, handleSubmit, reset] = useForm("xzzanbvw");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Simular envio do formulário
-    const emailBody = `Nome: ${formData.nome}%0D%0AEmail: ${formData.email}%0D%0AAssunto: ${formData.assunto}%0D%0A%0D%0AMensagem:%0D%0A${formData.mensagem}`;
-    const mailtoLink = `mailto:semana.tecnologica@ucpel.edu.br?subject=${encodeURIComponent(formData.assunto)}&body=${emailBody}`;
-    window.location.href = mailtoLink;
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  if (state.succeeded) {
+    toast.success("Mensagem enviada com sucesso!");
+    reset(); 
+  }
 
   return (
     <section id="contato" className="py-20 bg-white">
@@ -54,9 +40,12 @@ export function Contato() {
                     name="nome"
                     type="text"
                     required
-                    value={formData.nome}
-                    onChange={handleChange}
                     placeholder="Seu nome completo"
+                  />
+                  <ValidationError 
+                    prefix="Nome" 
+                    field="nome"
+                    errors={state.errors}
                   />
                 </div>
                 
@@ -67,9 +56,12 @@ export function Contato() {
                     name="email"
                     type="email"
                     required
-                    value={formData.email}
-                    onChange={handleChange}
                     placeholder="seu.email@exemplo.com"
+                  />
+                  <ValidationError 
+                    prefix="Email" 
+                    field="email"
+                    errors={state.errors}
                   />
                 </div>
                 
@@ -80,9 +72,12 @@ export function Contato() {
                     name="assunto"
                     type="text"
                     required
-                    value={formData.assunto}
-                    onChange={handleChange}
                     placeholder="Sobre o que você gostaria de falar?"
+                  />
+                  <ValidationError 
+                    prefix="Assunto" 
+                    field="assunto"
+                    errors={state.errors}
                   />
                 </div>
                 
@@ -92,21 +87,24 @@ export function Contato() {
                     id="mensagem"
                     name="mensagem"
                     required
-                    value={formData.mensagem}
-                    onChange={handleChange}
                     placeholder="Descreva sua dúvida ou sugestão..."
                     className="min-h-[120px]"
                   />
+                  <ValidationError 
+                    prefix="Mensagem" 
+                    field="mensagem"
+                    errors={state.errors}
+                  />
                 </div>
                 
-                <Button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                  Enviar Mensagem
+                <Button type="submit" disabled={state.submitting} className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                  {state.submitting ? "Enviando..." : "Enviar Mensagem"}
                 </Button>
               </form>
             </CardContent>
           </Card>
-
-          {/* Informações de Contato */}
+        
+          {/* Informações de Contato e Redes Sociais */}
           <div className="space-y-8">
             <Card>
               <CardHeader>
@@ -203,6 +201,7 @@ export function Contato() {
           </Card>
         </div>
       </div>
+      <Toaster richColors />
     </section>
   );
 }
