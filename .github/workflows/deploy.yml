@@ -1,4 +1,4 @@
-name: Deploy React Vite app
+name: Deploy React Vite app to GH Pages
 
 on:
   push:
@@ -31,4 +31,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-          publish_branch: gh_pages
+          publish_branch: gh-pages
