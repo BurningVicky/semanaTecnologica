@@ -11,10 +11,10 @@ export function Footer() {
   ];
 
   const sponsors = [
-    { nome: 'UCPEL', tipo: 'Patrocinador Ouro' },
-    { nome: 'Lorem', tipo: 'Patrocinador Prata' },
-    { nome: 'Lorem', tipo: 'Patrocinador Bronze' },
-    { nome: 'Lorem', tipo: 'Apoiador' }
+    { nome: 'UCPEL', tipo: 'Organizadora Principal' },
+    { nome: 'Lorem', tipo: 'Apoio Institucional' },
+    { nome: 'Lorem', tipo: 'Parceira' },
+    { nome: 'Lorem', tipo: 'Apoio' }
   ];
 
   return (

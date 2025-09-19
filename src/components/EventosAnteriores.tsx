@@ -10,7 +10,7 @@ export function EventosAnteriores() {
   const fotos = [
     { id: 1, titulo: 'Abertura do Evento 2024', descricao: 'Cerimônia de abertura com autoridades' },
     { id: 2, titulo: 'Palestra sobre IA', descricao: 'Especialista apresentando sobre inteligência artificial' },
-    { id: 3, titulo: 'Workshop DevOps', descricao: 'Sessão prática de desenvolvimento e operações' },
+    { id: 3, titulo: 'Minicurso Ferramentas de Acessibilidade', descricao: 'Sessão prática de desenvolvimento e operações' },
     { id: 4, titulo: 'Networking Coffee', descricao: 'Momento de interação entre participantes' },
     { id: 5, titulo: 'Mesa Redonda', descricao: 'Discussão sobre futuro da tecnologia' },
     { id: 6, titulo: 'Encerramento 2024', descricao: 'Cerimônia de encerramento' }
@@ -38,7 +38,7 @@ export function EventosAnteriores() {
         'Tendências e Desafios em Tecnologia na Era do Tudo Conectado',
         'Mesa Redonda: Os avanços tecnológicos na Engenharia'
       ],
-      imagem: `${import.meta.env.BASE_URL}img/evento2024.png` ,
+      imagem: `${import.meta.env.BASE_URL}/img/evento2024.png` ,
       link: 'https://st2024ucpel.exehda.org/doku.php?id=start'
     },
     {
@@ -54,7 +54,7 @@ export function EventosAnteriores() {
         'Minicurso: Fundamentos de Impressão 3D',
         'Segurança em Sistemas Embarcados: problemas, soluções e perspectivas'
       ],
-      imagem: `${import.meta.env.BASE_URL}img/evento2023.png` ,
+      imagem: `${import.meta.env.BASE_URL}/img/evento2023.png` ,
       link: 'http://olaria.ucpel.edu.br/st2023/doku.php'
     }
   ];

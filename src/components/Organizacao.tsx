@@ -20,7 +20,7 @@ export function Organizacao() {
       email: '@ucpel.edu.br',
       linkedin: '#',
       bio: 'Lorem.',
-      image: `${import.meta.env.BASE_URL}/img/palestraPlaceholder.png`
+      image: `${import.meta.env.BASE_URL}/img/palestrante.png`
     },
     {
       nome: 'Prof. Lorem',
@@ -29,7 +29,7 @@ export function Organizacao() {
       email: '@ucpel.edu.br',
       linkedin: '#',
       bio: 'Lorem.',
-      image: `${import.meta.env.BASE_URL}/img/palestraPlaceholder.png`
+      image: `${import.meta.env.BASE_URL}/img/palestrante.png`
     },
     {
       nome: 'Profª. Lorem',
@@ -38,7 +38,7 @@ export function Organizacao() {
       email: '@ucpel.edu.br',
       linkedin: '#',
       bio: 'Lorem.',
-      image: `${import.meta.env.BASE_URL}/img/palestraPlaceholder.png`
+      image: `${import.meta.env.BASE_URL}/img/palestrante.png`
     }
   ];
 
@@ -46,7 +46,7 @@ export function Organizacao() {
     {
       nome: 'Universidade Católica de Pelotas',
       tipo: 'Organizadora Principal',
-      logo: `${import.meta.env.BASE_URL}/img/ucpelLogo2.png`
+      logo: `${import.meta.env.BASE_URL}/img/UCPLG2.png`
     },
     {
       nome: 'Lorem',
