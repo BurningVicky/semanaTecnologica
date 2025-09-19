@@ -31,7 +31,7 @@ export function Header() {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-              <a href="/" className="block">
+              <a href={import.meta.env.BASE_URL} className="block">
                 <img 
                 src={`${import.meta.env.BASE_URL}/img/UCPLG.png`}
                 alt="Logo UCPEL" 
@@ -147,7 +147,7 @@ export function Header() {
                 >
                   <Button 
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                    onClick={() => window.open('https://forms.google.com', '_blank')}
+                    onClick={() => window.open('https://forms.gle/TGJ6ErsBtDmYqmp66', '_blank')}
                   >
                     Inscreva-se
                   </Button>
