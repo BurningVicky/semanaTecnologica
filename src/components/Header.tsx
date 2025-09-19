@@ -33,7 +33,7 @@ export function Header() {
           >
               <a href="/" className="block">
                 <img 
-                src={`${import.meta.env.BASE_URL}img/ucpelLogo.png`}
+                src='semanaTecnologica/img/ucpelLogo.png'
                 alt="Logo UCPEL" 
                 className="h-10 w-auto object-contain"
                 />

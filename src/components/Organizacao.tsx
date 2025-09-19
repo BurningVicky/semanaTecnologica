@@ -11,7 +11,7 @@ export function Organizacao() {
       email: '@ucpel.edu.br',
       linkedin: '#',
       bio: 'Lorem.',
-      image: `${import.meta.env.BASE_URL}img/profMorgana.png` 
+      image: 'semanaTecnologica/img/profMorgana.png'
     },
     {
       nome: 'Profª. Lorem',
@@ -20,7 +20,7 @@ export function Organizacao() {
       email: '@ucpel.edu.br',
       linkedin: '#',
       bio: 'Lorem.',
-      image: `${import.meta.env.BASE_URL}img/palestraPlaceholder.png` 
+      image: 'semanaTecnologica/img/palestraPlaceholder.png'
     },
     {
       nome: 'Prof. Lorem',
@@ -29,7 +29,7 @@ export function Organizacao() {
       email: '@ucpel.edu.br',
       linkedin: '#',
       bio: 'Lorem.',
-      image: `${import.meta.env.BASE_URL}img/palestraPlaceholder.png` 
+      image: 'semanaTecnologica/img/palestraPlaceholder.png'
     },
     {
       nome: 'Profª. Lorem',
@@ -38,7 +38,7 @@ export function Organizacao() {
       email: '@ucpel.edu.br',
       linkedin: '#',
       bio: 'Lorem.',
-      image: `${import.meta.env.BASE_URL}img/palestraPlaceholder.png` 
+      image: 'semanaTecnologica/img/palestraPlaceholder.png'
     }
   ];
 
@@ -46,7 +46,7 @@ export function Organizacao() {
     {
       nome: 'Universidade Católica de Pelotas',
       tipo: 'Organizadora Principal',
-      logo: '#'
+      logo: 'semanaTecnologica/img/ucpelLogo2.png'
     },
     {
       nome: 'Lorem',
@@ -125,8 +125,12 @@ export function Organizacao() {
             {instituicoes.map((instituicao, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow duration-300 text-center">
                 <CardContent className="p-6">
-                  <div className="h-24 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-gray-500 text-sm">Logo da {instituicao.nome}</span>
+                  <div className="aspect-w-1 aspect-h-1">
+                    <ImageWithFallback 
+                      src={instituicao.logo}
+                      alt={instituicao.nome}
+                      className="w-full h-48 object-cover rounded-t-lg"
+                    />
                   </div>
                   <h4 className="font-semibold mb-2">{instituicao.nome}</h4>
                   <p className="text-sm text-blue-600">{instituicao.tipo}</p>
