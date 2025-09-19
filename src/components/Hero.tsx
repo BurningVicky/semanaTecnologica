@@ -9,7 +9,7 @@ export function Hero() {
       {/* Background Pattern */}
       <div className="absolute inset-0">
         <ImageWithFallback 
-          src={`${import.meta.env.BASE_URL}/img/techBg1.png`}
+          src={`${import.meta.env.BASE_URL}/img/test.jpg`}
           alt="Tech Background"
           className="w-full h-full object-cover"
         />
