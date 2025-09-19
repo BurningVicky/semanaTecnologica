@@ -89,7 +89,7 @@ export function Hero() {
               transition={{ duration: 0.3 }}
             >
               <ImageWithFallback 
-                src='semanaTecnologica/img/animeCharMetaVRLG.jpg'
+                src={`${import.meta.env.BASE_URL}/img/animeCharMetaVRLG.jpg`}
                 alt="Mulher utilizando equipamento VR em um mundo Synthwave"
                  className="w-full h-auto rounded-lg shadow-2xl transition-all duration-300 hover:opacity-50 opacity-100"
               />
