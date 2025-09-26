@@ -1875,7 +1875,7 @@
   }
 
   .bg-white\/80 {
-    background-color: #fffc;
+    background-color: rgba(252, 7, 7, 0.8);
   }
 
   @supports (color: color-mix(in lab, red, red)) {
@@ -1975,7 +1975,7 @@
   }
 
   .object-cover {
-    object-fit: cover;
+    object-fit: fill;
   }
 
   .p-0 {

@@ -2,18 +2,59 @@ import { Button } from './ui/button';
 import { Calendar, MapPin } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { motion } from 'motion/react';
+import Prism from './Prism';
+import { useGlitch } from 'react-powerglitch';
 
 export function Hero() {
+  // Criando glitch para imagem e CTAs
+  const glitchImage = useGlitch({
+    playMode: 'hover',
+    createContainers: true,
+    hideOverflow: true,
+    glitchTimeSpan: false,
+    slice: { count: 6, velocity: 10, minHeight: 0.05, maxHeight: 0.15 },
+    shake: { velocity: 10, amplitudeX: 0.2, amplitudeY: 0.2 },
+    pulse: false,
+  });
+
+  const glitchCTA1 = useGlitch({
+    playMode: 'hover',
+    createContainers: true,
+    hideOverflow: true,
+    glitchTimeSpan: false,
+    slice: { count: 3, velocity: 8, minHeight: 0.05, maxHeight: 0.15 },
+    shake: { velocity: 5, amplitudeX: 0.1, amplitudeY: 0.1 },
+    pulse: false,
+  });
+
+  const glitchCTA2 = useGlitch({
+    playMode: 'hover',
+    createContainers: true,
+    hideOverflow: true,
+    glitchTimeSpan: false,
+    slice: { count: 3, velocity: 8, minHeight: 0.05, maxHeight: 0.15 },
+    shake: { velocity: 5, amplitudeX: 0.1, amplitudeY: 0.1 },
+    pulse: false,
+  });
+
   return (
     <section className="pt-16 min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 relative overflow-hidden">
-      {/* Background Pattern */}
+      {/* Background Prism */}
       <div className="absolute inset-0">
-        <ImageWithFallback 
-          src={`${import.meta.env.BASE_URL}/img/techBg1.png`}
-          alt="Tech Background"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/50" /> {/* overlay */}
+        <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
+          <Prism
+            animationType="3drotate"
+            timeScale={1}
+            height={2.5}
+            baseWidth={3.5}
+            scale={2.6}
+            hueShift={0}
+            colorFrequency={1}
+            noise={0}
+            glow={1}
+          />
+        </div>
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -55,24 +96,28 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Button 
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-3"
-                onClick={() => window.open('https://forms.gle/TGJ6ErsBtDmYqmp66', '_blank')}
-              >
-                Inscreva-se Gratuitamente
-              </Button>
-              <Button 
-                size="lg"
-                className="bg-white/10 border-2 border-white text-white hover:bg-white hover:text-blue-900 text-lg px-8 py-3 backdrop-blur-sm"
-                onClick={() => document.getElementById('sobre')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Saiba Mais
-              </Button>
+              <div ref={glitchCTA1.ref}>
+                <Button 
+                  size="lg"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-3"
+                  onClick={() => window.open('https://forms.gle/TGJ6ErsBtDmYqmp66', '_blank')}
+                >
+                  Inscreva-se Gratuitamente
+                </Button>
+              </div>
+              <div ref={glitchCTA2.ref}>
+                <Button 
+                  size="lg"
+                  className="bg-white/10 border-2 border-white text-white hover:bg-white hover:text-blue-900 text-lg px-8 py-3 backdrop-blur-sm"
+                  onClick={() => document.getElementById('sobre')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Saiba Mais
+                </Button>
+              </div>
             </motion.div>
           </motion.div>
 
-          {/* VR Image */}
+          {/* VR Image com glitch */}
           <motion.div 
             className="relative"
             initial={{ opacity: 0, x: 50 }}
@@ -88,11 +133,13 @@ export function Hero() {
               }}
               transition={{ duration: 0.3 }}
             >
-              <ImageWithFallback 
-                src={`${import.meta.env.BASE_URL}/img/animeCharMetaVRLG.jpg`}
-                alt="Mulher utilizando equipamento VR em um mundo Synthwave"
-                 className="w-full h-auto rounded-lg shadow-2xl transition-all duration-300 hover:opacity-50 opacity-100"
-              />
+              <div ref={glitchImage.ref}>
+                <ImageWithFallback 
+                  src={`${import.meta.env.BASE_URL}/img/animeCharMetaVRLG.jpg`}
+                  alt="Mulher utilizando equipamento VR em um mundo Synthwave"
+                  className="w-full h-auto rounded-lg shadow-2xl transition-all duration-300 hover:opacity-50 opacity-100"
+                />
+              </div>
             </motion.div>
             {/* Glow effect */}
             <motion.div 

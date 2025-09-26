@@ -6,6 +6,7 @@ import { Textarea } from './ui/textarea';
 import { Label } from './ui/label';
 import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, Twitter } from 'lucide-react';
 import { Toaster, toast } from 'sonner';
+import { useGlitch } from 'react-powerglitch';
 
 export function Contato() {
   const [state, handleSubmit, reset] = useForm("xzzanbvw");
@@ -14,10 +15,32 @@ export function Contato() {
     toast.success("Mensagem enviada com sucesso!");
     reset(); 
   }
+    
+    // Criando glitch para imagem e CTAs
+    const glitchImage = useGlitch({
+      playMode: 'hover',
+      createContainers: true,
+      hideOverflow: true,
+      glitchTimeSpan: false,
+      slice: { count: 6, velocity: 10, minHeight: 0.05, maxHeight: 0.15 },
+      shake: { velocity: 10, amplitudeX: 0.2, amplitudeY: 0.2 },
+      pulse: false,
+    });
+  
+    const glitchCTA = useGlitch({
+      playMode: 'hover',
+      createContainers: true,
+      hideOverflow: true,
+      glitchTimeSpan: false,
+      slice: { count: 3, velocity: 8, minHeight: 0.05, maxHeight: 0.15 },
+      shake: { velocity: 5, amplitudeX: 0.1, amplitudeY: 0.1 },
+      pulse: false,
+    });
 
   return (
-    <section id="contato" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contato" className="py-20">
+      <div className="absolute inset-0 bg-blue-50/50 backdrop-blur pointer-events-none -z-10"></div>
+      <div className="relative max-w-7x1 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Contato</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -140,7 +163,7 @@ export function Contato() {
                 </div>
               </CardContent>
             </Card>
-
+<div ref={glitchCTA.ref}></div>
             {/* Redes Sociais */}
             <Card>
               <CardHeader>
@@ -149,19 +172,19 @@ export function Contato() {
               <CardContent>
                 <p className="text-gray-600 mb-4">Siga-nos nas redes sociais para ficar por dentro de todas as novidades:</p>
                 <div className="grid grid-cols-2 gap-4">
-                  <a href="https://www.facebook.com/UCPel" target="__blank" className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                  <a ref={glitchCTA.ref} href="https://www.facebook.com/UCPel" target="__blank" className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
                     <Facebook className="text-blue-600" size={20} />
                     <span className="text-blue-600">Facebook</span>
                   </a>
-                  <a href="https://www.instagram.com/ucpel" target="__blank"className="flex items-center space-x-3 p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
+                  <a ref={glitchCTA.ref} href="https://www.instagram.com/ucpel" target="__blank"className="flex items-center space-x-3 p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
                     <Instagram className="text-pink-600" size={20} />
                     <span className="text-pink-600">Instagram</span>
                   </a>
-                  <a href="https://www.linkedin.com/school/ucpel/posts/?feedView=all" target="__blank" className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                  <a ref={glitchCTA.ref} href="https://www.linkedin.com/school/ucpel/posts/?feedView=all" target="__blank" className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
                     <Linkedin className="text-blue-700" size={20} />
                     <span className="text-blue-700">LinkedIn</span>
                   </a>
-                  <a href="https://x.com/ucpel" target="__blank" className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                  <a ref={glitchCTA.ref} href="https://x.com/ucpel" target="__blank" className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
                     <Twitter className="text-blue-500" size={20} />
                     <span className="text-blue-500">Twitter</span>
                   </a>

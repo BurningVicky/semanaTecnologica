@@ -26,8 +26,8 @@ export function Sobre() {
   ];
 
   return (
-    <section id="sobre" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="sobre" className="py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-transparent">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Sobre o Evento</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -55,7 +55,7 @@ export function Sobre() {
                 O evento tem como objetivo reunir estudantes, pesquisadores e profissionais para discutir avanços tecnológicos e inovações em inteligência artificial, consolidando-se como espaço de integração acadêmica e científica.
               </p>
 
-        <div className="bg-white rounded-lg p-8 shadow-md pt-12">
+        <div className="rounded-lg p-8 shadow-md pt-12">
           <h3 className="text-2xl font-semibold mb-6 pt-12">O que esperar?</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
