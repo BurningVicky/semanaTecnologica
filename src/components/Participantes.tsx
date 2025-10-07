@@ -90,8 +90,8 @@ export function Participantes() {
     <section id="participantes" className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Participantes</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Participantes</h2>
+          <p className="text-xl text-white max-w-3xl mx-auto">
             Conheça os especialistas que compartilharão seus conhecimentos durante a Semana Tecnológica.
           </p>
         </div>

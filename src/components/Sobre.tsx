@@ -31,7 +31,7 @@ export function Sobre() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Sobre o Evento</h2>
           <p className="text-xl text-white max-w-3xl mx-auto">
-             A 11ª Semana Tecnológica da UCPEL, promovida pelos cursos do Centro de Ciências Sociais e Tecnológicas, será realizada entre os dias 12 a 15 de novembro de 2025.
+             A 11ª Semana Tecnológica da UCPEL, promovida pelos cursos do Centro de Ciências Sociais e Tecnológicas, será realizada entre os dias 12 a 14 de novembro de 2025.
              A abertura ocorrerá no dia 12, na sala não definida da Universidade Católica de Pelotas, e as demais atividades noturnas serão transmitidas pela plataforma Google Meet.
           </p>          
         </div>

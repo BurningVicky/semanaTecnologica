@@ -70,8 +70,8 @@ export function EventosAnteriores() {
     <section id="eventos-anteriores" className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Eventos Anteriores</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Eventos Anteriores</h2>
+          <p className="text-xl text-black max-w-3xl mx-auto">
             Relembre as edições passadas da Semana Tecnológica e veja como o evento tem crescido ao longo dos anos.
           </p>
         </div>
@@ -83,28 +83,28 @@ export function EventosAnteriores() {
               <Users className="text-blue-600" size={32} />
             </div>
             <div className="text-3xl font-bold text-gray-900">{estatisticas.totalParticipantes}</div>
-            <div className="text-gray-600">Participantes</div>
+            <div className="text-black">Participantes</div>
           </div>
           <div className="text-center">
             <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
               <Award className="text-green-600" size={32} />
             </div>
             <div className="text-3xl font-bold text-gray-900">{estatisticas.totalPalestras}</div>
-            <div className="text-gray-600">Palestras</div>
+            <div className="text-black">Palestras</div>
           </div>
           <div className="text-center">
             <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
               <Calendar className="text-purple-600" size={32} />
             </div>
             <div className="text-3xl font-bold text-gray-900">{estatisticas.totalEdicoes}</div>
-            <div className="text-gray-600">Edições</div>
+            <div className="text-black">Edições</div>
           </div>
           <div className="text-center">
             <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
               <Award className="text-orange-600" size={32} />
             </div>
             <div className="text-3xl font-bold text-gray-900">{estatisticas.satisfacao}</div>
-            <div className="text-gray-600">Satisfação</div>
+            <div className="text-black">Satisfação</div>
           </div>
         </div>
 

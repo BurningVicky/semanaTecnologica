@@ -57,7 +57,8 @@ export function Hero() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.2 }}
             >
-              Semana Tecnológica
+              11ª Semana Tecnológica
+              do Chip à Nuvem
             </motion.h1>
             <p className="text-xl mb-8 text-gray-200">
               O maior evento de tecnologia da região sul! Palestras, workshops e networking 
@@ -67,7 +68,7 @@ export function Hero() {
             <div className="space-y-4 mb-8">
               <div className="flex items-center space-x-3">
                 <Calendar className="text-blue-400" size={20} />
-                <span className="text-lg">12 a 15 de Novembro de 2025</span>
+                <span className="text-lg">12 a 14 de Novembro de 2025</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="text-purple-400" size={20} />

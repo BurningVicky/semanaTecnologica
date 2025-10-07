@@ -40,10 +40,10 @@ export function Contato() {
   return (
     <section id="contato" className="py-20">
       <div className="absolute inset-0 bg-blue-50/50 backdrop-blur pointer-events-none -z-10"></div>
-      <div className="relative max-w-7x1 mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Contato</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Contato</h2>
+          <p className="text-xl text-white max-w-3xl mx-auto">
             Entre em contato conosco para esclarecer dúvidas, sugerir palestras ou obter mais informações sobre o evento.
           </p>
         </div>

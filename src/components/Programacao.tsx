@@ -67,8 +67,8 @@ export function Programacao() {
     <section id="programacao" className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Programação</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Programação</h2>
+          <p className="text-xl text-white max-w-3xl mx-auto">
             Confira a programação completa dos 3 dias de evento com palestras vespertinas e noturnas.
           </p>
         </div>
@@ -104,7 +104,7 @@ export function Programacao() {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-gray-600 mb-4">
+          <p className="text-black mb-4">
             * A programação pode sofrer alterações. Mantenha-se atualizado através dos nossos canais oficiais.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
