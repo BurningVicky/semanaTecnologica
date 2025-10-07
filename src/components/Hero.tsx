@@ -38,24 +38,9 @@ export function Hero() {
   });
 
   return (
-    <section className="pt-16 min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 relative overflow-hidden">
-      {/* Background Prism */}
-      <div className="absolute inset-0">
-        <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
-          <Prism
-            animationType="3drotate"
-            timeScale={1}
-            height={2.5}
-            baseWidth={3.5}
-            scale={2.6}
-            hueShift={0.2}
-            colorFrequency={1}
-            noise={0}
-            glow={1}
-          />
-        </div>
-        <div className="absolute inset-0 bg-black/60" />
-      </div>
+    <section className="pt-16 min-h-screen relative overflow-hidden">
+      
+        
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen py-20">

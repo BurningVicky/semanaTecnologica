@@ -10,6 +10,7 @@ import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import { useGlitch, GlitchHandle } from 'react-powerglitch';
 import RippleGrid from './components/RippleGrid';
+import Prism from './components/Prism';
 
 export default function App() {
   const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false });
@@ -17,20 +18,21 @@ export default function App() {
   return (
     <div className="min-h-screen relative">
       
-      {/* 1. CONTAINER FIXO DE FUNDO (Z-index negativo para ficar atrás) */}
+      {/* CONTAINER FIXO DE FUNDO (Z-index negativo para ficar atrás) */}
       <div className="fixed inset-0 -z-10 w-full h-full"> 
         
-        {/* Contêiner para o RippleGrid (ajuste o estilo se necessário) */}
-        <div style={{ position: 'relative', height: '100%', overflow: 'hidden' }}>
-          <RippleGrid
-            enableRainbow={false}
-            gridColor="#ffffff"
-            rippleIntensity={0.05}
-            gridSize={10}
-            gridThickness={15}
-            mouseInteraction={true}
-            mouseInteractionRadius={1.2}
-            opacity={0.8}
+        {/* Background Prism */}
+        <div className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900' style={{ width: '100%', height: '100%', position: 'absolute' }}>
+          <Prism
+            animationType="3drotate"
+            timeScale={1}
+            height={2.5}
+            baseWidth={3.5}
+            scale={2.6}
+            hueShift={0.2}
+            colorFrequency={1}
+            noise={0}
+            glow={1}
           />
           
           {/* Overlay leve para contraste (dentro do contêiner fixo) */}
@@ -42,19 +44,17 @@ export default function App() {
 
       <main className="relative z-10">
         
-        {/* Hero mantém o Prism próprio */}
         <Hero />
-
-        {/* Demais seções aparecem sobre o PixelBlast */}
         <Sobre />
         <Programacao />
         <Participantes />
         <Organizacao />
         <EventosAnteriores />
         <Contato />
+        <Footer />
       </main>
 
-      <Footer />
+      
       <ScrollToTop />
     </div>
   );
