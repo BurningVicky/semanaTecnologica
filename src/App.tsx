@@ -9,17 +9,19 @@ import { Contato } from './components/Contato';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import { useGlitch, GlitchHandle } from 'react-powerglitch';
-import rippleGrid from './components/rippleGrid';
+import RippleGrid from './components/RippleGrid';
 
 export default function App() {
   const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false });
 
   return (
     <div className="min-h-screen relative">
-      <Header />
-
-      {/* Background PixelBlast para as seções após o Hero */}
-      <div style={{position: 'relative', height: '500px', overflow: 'hidden'}}>
+      
+      {/* 1. CONTAINER FIXO DE FUNDO (Z-index negativo para ficar atrás) */}
+      <div className="fixed inset-0 -z-10 w-full h-full"> 
+        
+        {/* Contêiner para o RippleGrid (ajuste o estilo se necessário) */}
+        <div style={{ position: 'relative', height: '100%', overflow: 'hidden' }}>
           <RippleGrid
             enableRainbow={false}
             gridColor="#ffffff"
@@ -30,12 +32,16 @@ export default function App() {
             mouseInteractionRadius={1.2}
             opacity={0.8}
           />
+          
+          {/* Overlay leve para contraste (dentro do contêiner fixo) */}
+          <div className="absolute inset-0 bg-black/40" />
         </div>
-        {/* Overlay leve para contraste */}
-        <div className="absolute inset-0 bg-black/40" />
       </div>
 
+      <Header />
+
       <main className="relative z-10">
+        
         {/* Hero mantém o Prism próprio */}
         <Hero />
 

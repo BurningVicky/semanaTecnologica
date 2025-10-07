@@ -48,7 +48,7 @@ export function Hero() {
             height={2.5}
             baseWidth={3.5}
             scale={2.6}
-            hueShift={0}
+            hueShift={0.2}
             colorFrequency={1}
             noise={0}
             glow={1}
