@@ -27,9 +27,9 @@ export default function App() {
             animationType="3drotate"
             timeScale={1}
             height={2.5}
-            baseWidth={3.5}
+            baseWidth={3.8}
             scale={2.6}
-            hueShift={0.2}
+            hueShift={0.5}
             colorFrequency={1}
             noise={0}
             glow={1}
@@ -54,7 +54,6 @@ export default function App() {
         <Footer />
       </main>
 
-      
       <ScrollToTop />
     </div>
   );

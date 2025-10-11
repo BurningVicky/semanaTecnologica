@@ -7,83 +7,69 @@ export function Participantes() {
   // Skeleton para participantes
   const participantes = [
     {
-      nome: 'A ser confirmado',
-      cargo: 'Especialista em IA',
-      empresa: 'Tech Company',
-      tema: 'Inteligência Artificial: O Futuro é Agora',
-      bio: 'Biografia do palestrante será adicionada em breve.',
-      image: `${import.meta.env.BASE_URL}/img/palestrante.png`,
+      nome: 'Ulisses Brisolara',
+      tema: 'A definir',
+      bio: 'Professor adjunto do Centro de Desenvolvimento Tecnológico da Universidade Federal de Pelotas (UFPel) e coordenador do Hub de Inovação em Inteligência Artificial (H2IA).',
+      image: `${import.meta.env.BASE_URL}/img/ulisses.png`,
       social: {
-        linkedin: '#',
-        twitter: '#',
-        website: '#'
+        linkedin: 'https://www.linkedin.com/in/ubcorrea/'
       }
     },
     {
-      nome: 'A ser confirmado',
-      cargo: 'Desenvolvedor Senior',
-      empresa: 'Web Solutions',
-      tema: 'Desenvolvimento Web Moderno',
+      nome: 'Leomar Rosa',
+      tema: 'A definir',
       bio: 'Biografia do palestrante será adicionada em breve.',
       image: `${import.meta.env.BASE_URL}/img/palestrante.png`,
       social: {
         linkedin: '#',
-        twitter: '#',
-        website: '#'
       }
     },
     {
-      nome: 'A ser confirmado',
-      cargo: 'Especialista em Segurança',
-      empresa: 'CyberSec Corp',
-      tema: 'CyberSecurity 2025',
-      bio: 'Biografia do palestrante será adicionada em breve.',
-      image: `${import.meta.env.BASE_URL}/img/palestrante.png`,
+      nome: 'Adenauer Yamin',
+      tema: 'A definir',
+      bio: 'Graduação em Engenharia Elétrica pela Universidade Católica de Pelotas, mestrado e doutorado em Computação pela Universidade Federal do Rio Grande do Sul.',
+      image: `${import.meta.env.BASE_URL}/img/adenauer.png`,
       social: {
-        linkedin: '#',
-        twitter: '#',
-        website: '#'
+        linkedin: 'https://www.linkedin.com/in/adenauer-yamin/',
       }
     },
     {
-      nome: 'A ser confirmado',
-      cargo: 'Cloud Architect',
-      empresa: 'CloudTech',
-      tema: 'Cloud Computing e DevOps',
-      bio: 'Biografia do palestrante será adicionada em breve.',
-      image: `${import.meta.env.BASE_URL}/img/palestrante.png`,
+      nome: 'Geelsu Hwang',
+      tema: 'A definir',
+      bio: 'Associate Professor in the Department of Preventive & Restorative Sciences.',
+      image: `${import.meta.env.BASE_URL}/img/geelsu.png`,
       social: {
-        linkedin: '#',
-        twitter: '#',
-        website: '#'
+        linkedin: 'https://www.linkedin.com/in/geelsu-hwang-8a608935/',
       }
     },
     {
-      nome: 'A ser confirmado',
-      cargo: 'UX/UI Designer',
-      empresa: 'Design Studio',
-      tema: 'UX/UI Design: Criando Experiências',
-      bio: 'Biografia do palestrante será adicionada em breve.',
-      image: `${import.meta.env.BASE_URL}/img/palestrante.png`,
+      nome: 'Mateus Grellert',
+      tema: 'A definir',
+      bio: 'Atualmente é professor adjunto da Universidade Federal do Rio Grande do Sul (UFRGS), docente permanente do Programa de Pós-Graduação em Ciência da Computação (PPGCC) da Universidade Federal de Santa Catarina (UFSC).',
+      image: `${import.meta.env.BASE_URL}/img/mateus.png`,
       social: {
-        linkedin: '#',
-        twitter: '#',
-        website: '#'
+        linkedin: 'https://www.linkedin.com/in/mateus-grellert/',
       }
     },
     {
-      nome: 'A ser confirmado',
-      cargo: 'Blockchain Developer',
-      empresa: 'Crypto Solutions',
-      tema: 'Blockchain e Criptomoedas',
+      nome: 'Pedro Toledo',
+      tema: 'Analog Design in the IP business unit at Synopsys',
+      bio: 'Pedro Toledo (Member, IEEE) received the B.Sc. degree in electronic engineering from the Universidade Federal de Pernambuco (UFPE).',
+      image: `${import.meta.env.BASE_URL}/img/toledo.png`,
+      social: {
+        linkedin: 'https://www.linkedin.com/in/eng-pedro-toledo/',
+      }
+    },
+     {
+      nome: 'Henrique Völz',
+      tema: 'Proteção Elétrica e Ensaios de Relés de Média Tensão',
       bio: 'Biografia do palestrante será adicionada em breve.',
       image: `${import.meta.env.BASE_URL}/img/palestrante.png`,
       social: {
         linkedin: '#',
-        twitter: '#',
-        website: '#'
       }
     }
+
   ];
 
   return (
@@ -92,7 +78,7 @@ export function Participantes() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">Participantes</h2>
           <p className="text-xl text-white max-w-3xl mx-auto">
-            Conheça os especialistas que compartilharão seus conhecimentos durante a Semana Tecnológica.
+            Conheça os especialistas que compartilharão seus conhecimentos durante a 11ª Semana Tecnológica.
           </p>
         </div>
 
@@ -142,38 +128,6 @@ export function Participantes() {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <div className="bg-white rounded-lg p-8 shadow-md">
-            <h3 className="text-2xl font-semibold mb-6">Temas das Palestras</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="p-4 bg-blue-50 rounded-lg">
-                <h4 className="font-semibold text-blue-800 mb-2">Inteligência Artificial</h4>
-                <p className="text-sm text-blue-600">Machine Learning, Deep Learning e aplicações práticas da IA</p>
-              </div>
-              <div className="p-4 bg-green-50 rounded-lg">
-                <h4 className="font-semibold text-green-800 mb-2">Desenvolvimento Web</h4>
-                <p className="text-sm text-green-600">Frameworks modernos, performance e melhores práticas</p>
-              </div>
-              <div className="p-4 bg-red-50 rounded-lg">
-                <h4 className="font-semibold text-red-800 mb-2">Segurança Cibernética</h4>
-                <p className="text-sm text-red-600">Proteção de dados, ameaças e estratégias de defesa</p>
-              </div>
-              <div className="p-4 bg-purple-50 rounded-lg">
-                <h4 className="font-semibold text-purple-800 mb-2">Cloud Computing</h4>
-                <p className="text-sm text-purple-600">AWS, Azure, DevOps e arquiteturas escaláveis</p>
-              </div>
-              <div className="p-4 bg-orange-50 rounded-lg">
-                <h4 className="font-semibold text-orange-800 mb-2">UX/UI Design</h4>
-                <p className="text-sm text-orange-600">Design thinking, prototipagem e experiência do usuário</p>
-              </div>
-              <div className="p-4 bg-indigo-50 rounded-lg">
-                <h4 className="font-semibold text-indigo-800 mb-2">Blockchain</h4>
-                <p className="text-sm text-indigo-600">Criptomoedas, contratos inteligentes e descentralização</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

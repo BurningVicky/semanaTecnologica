@@ -47,21 +47,6 @@ export function Organizacao() {
       nome: 'Universidade Católica de Pelotas',
       tipo: 'Organizadora Principal',
       logo: `${import.meta.env.BASE_URL}/img/UCPLG2.png`
-    },
-    {
-      nome: 'Lorem',
-      tipo: 'Apoio Institucional',
-      logo: '#'
-    },
-    {
-      nome: 'Lorem',
-      tipo: 'Parceira',
-      logo: '#'
-    },
-    {
-      nome: 'Lorem',
-      tipo: 'Apoio',
-      logo: '#'
     }
   ];
 
