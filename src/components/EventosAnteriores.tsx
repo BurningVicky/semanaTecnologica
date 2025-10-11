@@ -16,13 +16,8 @@ export function EventosAnteriores() {
     { id: 6, titulo: 'Encerramento 2024', descricao: 'Cerimônia de encerramento' }
   ];
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % fotos.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + fotos.length) % fotos.length);
-  };
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % fotos.length);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + fotos.length) % fotos.length);
 
   const eventosAnteriores = [
     {
@@ -38,7 +33,7 @@ export function EventosAnteriores() {
         'Tendências e Desafios em Tecnologia na Era do Tudo Conectado',
         'Mesa Redonda: Os avanços tecnológicos na Engenharia'
       ],
-      imagem: `${import.meta.env.BASE_URL}/img/evento2024.png` ,
+      imagem: `${import.meta.env.BASE_URL}/img/evento2024.png`,
       link: 'https://st2024ucpel.exehda.org/doku.php?id=start'
     },
     {
@@ -54,7 +49,7 @@ export function EventosAnteriores() {
         'Minicurso: Fundamentos de Impressão 3D',
         'Segurança em Sistemas Embarcados: problemas, soluções e perspectivas'
       ],
-      imagem: `${import.meta.env.BASE_URL}/img/evento2023.png` ,
+      imagem: `${import.meta.env.BASE_URL}/img/evento2023.png`,
       link: 'http://olaria.ucpel.edu.br/st2023/doku.php'
     }
   ];
@@ -67,51 +62,40 @@ export function EventosAnteriores() {
   };
 
   return (
-    <section id="eventos-anteriores" className="py-20 bg-transparent">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="eventos-anteriores" className="relative py-20 bg-transparent overflow-hidden">
+      {/* Camada de fundo com glassmorphism */}
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-50/40 to-purple-50/30 backdrop-blur-2xl -z-10" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Eventos Anteriores</h2>
-          <p className="text-xl text-black max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white drop-shadow-lg mb-4">Eventos Anteriores</h2>
+          <p className="text-xl text-white/80 max-w-3xl mx-auto">
             Relembre as edições passadas da Semana Tecnológica e veja como o evento tem crescido ao longo dos anos.
           </p>
         </div>
 
         {/* Estatísticas Gerais */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          <div className="text-center">
-            <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <Users className="text-blue-600" size={32} />
+          {[
+            { icon: <Users className="text-blue-600" size={32} />, valor: estatisticas.totalParticipantes, label: 'Participantes' },
+            { icon: <Award className="text-green-600" size={32} />, valor: estatisticas.totalPalestras, label: 'Palestras' },
+            { icon: <Calendar className="text-purple-600" size={32} />, valor: estatisticas.totalEdicoes, label: 'Edições' },
+            { icon: <Award className="text-orange-600" size={32} />, valor: estatisticas.satisfacao, label: 'Satisfação' },
+          ].map((item, index) => (
+            <div key={index} className="text-center p-6 rounded-2xl bg-white/30 backdrop-blur-md border border-white/40 shadow-md hover:shadow-lg transition-all duration-300">
+              <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-white/50">
+                {item.icon}
+              </div>
+              <div className="text-3xl font-bold text-gray-900">{item.valor}</div>
+              <div className="text-gray-700">{item.label}</div>
             </div>
-            <div className="text-3xl font-bold text-gray-900">{estatisticas.totalParticipantes}</div>
-            <div className="text-black">Participantes</div>
-          </div>
-          <div className="text-center">
-            <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <Award className="text-green-600" size={32} />
-            </div>
-            <div className="text-3xl font-bold text-gray-900">{estatisticas.totalPalestras}</div>
-            <div className="text-black">Palestras</div>
-          </div>
-          <div className="text-center">
-            <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <Calendar className="text-purple-600" size={32} />
-            </div>
-            <div className="text-3xl font-bold text-gray-900">{estatisticas.totalEdicoes}</div>
-            <div className="text-black">Edições</div>
-          </div>
-          <div className="text-center">
-            <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <Award className="text-orange-600" size={32} />
-            </div>
-            <div className="text-3xl font-bold text-gray-900">{estatisticas.satisfacao}</div>
-            <div className="text-black">Satisfação</div>
-          </div>
+          ))}
         </div>
 
         {/* Cards dos Eventos */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {eventosAnteriores.map((evento, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+            <Card key={index} className="bg-white/30 backdrop-blur-md border border-white/40 hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="aspect-w-16 aspect-h-9">
                 <ImageWithFallback 
                   src={evento.imagem}
@@ -120,7 +104,7 @@ export function EventosAnteriores() {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="flex items-center justify-between">
+                <CardTitle className="flex items-center justify-between text-gray-900">
                   <span>{evento.titulo}</span>
                   <span className="text-lg font-normal text-blue-600">{evento.ano}</span>
                 </CardTitle>
@@ -141,15 +125,15 @@ export function EventosAnteriores() {
                   </div>
                 </div>
                 
-                <p className="text-gray-600 mb-4">{evento.descricao}</p>
+                <p className="text-gray-700 mb-4">{evento.descricao}</p>
                 
                 <div className="mb-6">
-                  <h4 className="font-semibold mb-3">Principais Destaques:</h4>
+                  <h4 className="font-semibold mb-3 text-gray-900">Principais Destaques:</h4>
                   <ul className="space-y-2">
                     {evento.highlights.map((highlight, highlightIndex) => (
                       <li key={highlightIndex} className="flex items-start space-x-2">
                         <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-600 text-sm">{highlight}</span>
+                        <span className="text-gray-700 text-sm">{highlight}</span>
                       </li>
                     ))}
                   </ul>
@@ -157,7 +141,7 @@ export function EventosAnteriores() {
                 
                 <Button 
                   variant="outline" 
-                  className="w-full"
+                  className="w-full bg-white/60 hover:bg-white/80 text-blue-800 border-white/50 backdrop-blur-md"
                   onClick={() => window.open(evento.link, '_blank')}
                 >
                   Ver Detalhes do Evento
@@ -169,21 +153,21 @@ export function EventosAnteriores() {
         </div>
 
         {/* Galeria de Fotos - Slider */}
-        <div className="bg-white rounded-lg p-8 shadow-md">
-          <h3 className="text-2xl font-semibold text-center mb-8">Galeria de Momentos</h3>
+        <div className="bg-white/30 backdrop-blur-lg rounded-2xl p-8 shadow-lg border border-white/40">
+          <h3 className="text-2xl font-semibold text-center mb-8 text-gray-900">Galeria de Momentos</h3>
           <div className="relative">
             <div className="overflow-hidden rounded-lg">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
-                {fotos.map((foto, index) => (
+                {fotos.map((foto) => (
                   <div key={foto.id} className="w-full flex-shrink-0">
-                    <div className="aspect-video bg-gray-100 rounded-lg flex flex-col items-center justify-center p-8">
+                    <div className="aspect-video bg-white/60 backdrop-blur-sm rounded-lg flex flex-col items-center justify-center p-8">
                       <div className="text-center">
-                        <h4 className="text-lg font-semibold mb-2 text-gray-700">{foto.titulo}</h4>
-                        <p className="text-gray-500">{foto.descricao}</p>
-                        <div className="mt-4 w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
+                        <h4 className="text-lg font-semibold mb-2 text-gray-800">{foto.titulo}</h4>
+                        <p className="text-gray-600">{foto.descricao}</p>
+                        <div className="mt-4 w-16 h-16 bg-blue-100/70 rounded-full flex items-center justify-center mx-auto">
                           <span className="text-blue-600 text-2xl">📸</span>
                         </div>
                       </div>
@@ -196,13 +180,13 @@ export function EventosAnteriores() {
             {/* Controles do Slider */}
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200"
             >
               <ChevronLeft size={24} className="text-gray-600" />
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200"
             >
               <ChevronRight size={24} className="text-gray-600" />
             </button>
@@ -224,14 +208,14 @@ export function EventosAnteriores() {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white">
+          <div className="bg-white/20 backdrop-blur-md border border-white/40 rounded-2xl p-8 text-white shadow-lg">
             <h3 className="text-2xl font-semibold mb-4">Faça Parte da História!</h3>
             <p className="text-xl mb-6">
               Participe da edição 2025 e seja parte do maior evento de tecnologia da região.
             </p>
             <Button 
               size="lg"
-              className="bg-white/10 border-2 border-white text-white hover:bg-white hover:text-blue-900 backdrop-blur-sm"
+              className="bg-white/20 border-2 border-white text-white hover:bg-white hover:text-blue-900 backdrop-blur-sm"
               onClick={() => window.open('https://forms.gle/TGJ6ErsBtDmYqmp66', '_blank')}
             >
               Inscreva-se Agora

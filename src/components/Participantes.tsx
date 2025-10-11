@@ -4,7 +4,6 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 import { LinkedinIcon, TwitterIcon, Globe } from 'lucide-react';
 
 export function Participantes() {
-  // Skeleton para participantes
   const participantes = [
     {
       nome: 'Ulisses Brisolara',
@@ -12,8 +11,8 @@ export function Participantes() {
       bio: 'Professor adjunto do Centro de Desenvolvimento Tecnológico da Universidade Federal de Pelotas (UFPel) e coordenador do Hub de Inovação em Inteligência Artificial (H2IA).',
       image: `${import.meta.env.BASE_URL}/img/ulisses.png`,
       social: {
-        linkedin: 'https://www.linkedin.com/in/ubcorrea/'
-      }
+        linkedin: 'https://www.linkedin.com/in/ubcorrea/',
+      },
     },
     {
       nome: 'Leomar Rosa',
@@ -22,7 +21,7 @@ export function Participantes() {
       image: `${import.meta.env.BASE_URL}/img/palestrante.png`,
       social: {
         linkedin: '#',
-      }
+      },
     },
     {
       nome: 'Adenauer Yamin',
@@ -31,7 +30,7 @@ export function Participantes() {
       image: `${import.meta.env.BASE_URL}/img/adenauer.png`,
       social: {
         linkedin: 'https://www.linkedin.com/in/adenauer-yamin/',
-      }
+      },
     },
     {
       nome: 'Geelsu Hwang',
@@ -40,7 +39,7 @@ export function Participantes() {
       image: `${import.meta.env.BASE_URL}/img/geelsu.png`,
       social: {
         linkedin: 'https://www.linkedin.com/in/geelsu-hwang-8a608935/',
-      }
+      },
     },
     {
       nome: 'Mateus Grellert',
@@ -49,7 +48,7 @@ export function Participantes() {
       image: `${import.meta.env.BASE_URL}/img/mateus.png`,
       social: {
         linkedin: 'https://www.linkedin.com/in/mateus-grellert/',
-      }
+      },
     },
     {
       nome: 'Pedro Toledo',
@@ -58,72 +57,93 @@ export function Participantes() {
       image: `${import.meta.env.BASE_URL}/img/toledo.png`,
       social: {
         linkedin: 'https://www.linkedin.com/in/eng-pedro-toledo/',
-      }
+      },
     },
-     {
+    {
       nome: 'Henrique Völz',
       tema: 'Proteção Elétrica e Ensaios de Relés de Média Tensão',
       bio: 'Biografia do palestrante será adicionada em breve.',
       image: `${import.meta.env.BASE_URL}/img/palestrante.png`,
       social: {
         linkedin: '#',
-      }
-    }
-
+      },
+    },
   ];
 
   return (
-    <section id="participantes" className="py-20 bg-transparent">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="participantes"
+      className="relative py-24 overflow-hidden"
+    >
+      {/* Fundo translúcido com blur e gradiente animado */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-purple-900/60 via-indigo-900/50 to-transparent backdrop-blur-xl animate-gradient" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Participantes</h2>
-          <p className="text-xl text-white max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">
+            Participantes
+          </h2>
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
             Conheça os especialistas que compartilharão seus conhecimentos durante a 11ª Semana Tecnológica.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {participantes.map((participante, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-              <div className="aspect-w-1 aspect-h-1">
-                <ImageWithFallback 
+            <Card
+              key={index}
+              className="bg-white/10 border border-white/20 backdrop-blur-lg hover:bg-white/20 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
+            >
+              <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-t-lg">
+                <ImageWithFallback
                   src={participante.image}
                   alt={participante.nome}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-64 object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-lg font-semibold mb-2">{participante.nome}</h3>
-                <p className="text-blue-600 mb-1">{participante.cargo}</p>
-                <p className="text-sm text-gray-500 mb-4">{participante.empresa}</p>
-                
+              <CardContent className="p-6 text-white">
+                <h3 className="text-lg font-semibold mb-1">{participante.nome}</h3>
                 <div className="mb-4">
-                  <Badge variant="outline" className="bg-purple-50 text-purple-700">
+                  <Badge
+                    variant="outline"
+                    className="bg-purple-600/20 text-purple-300 border border-purple-400/40"
+                  >
                     {participante.tema}
                   </Badge>
                 </div>
-                
-                <p className="text-sm text-gray-600 mb-4">{participante.bio}</p>
-                
+
+                <p className="text-sm text-gray-300 mb-4 leading-relaxed">
+                  {participante.bio}
+                </p>
+
                 <div className="flex space-x-3">
-                  <a 
-                    href={participante.social.linkedin} 
-                    className="text-gray-400 hover:text-blue-600 transition-colors"
-                  >
-                    <LinkedinIcon size={20} />
-                  </a>
-                  <a 
-                    href={participante.social.twitter} 
-                    className="text-gray-400 hover:text-blue-400 transition-colors"
-                  >
-                    <TwitterIcon size={20} />
-                  </a>
-                  <a 
-                    href={participante.social.website} 
-                    className="text-gray-400 hover:text-gray-600 transition-colors"
-                  >
-                    <Globe size={20} />
-                  </a>
+                  {participante.social.linkedin && (
+                    <a
+                      href={participante.social.linkedin}
+                      target="_blank"
+                      className="text-gray-400 hover:text-blue-400 transition-colors"
+                    >
+                      <LinkedinIcon size={20} />
+                    </a>
+                  )}
+                  {participante.social.twitter && (
+                    <a
+                      href={participante.social.twitter}
+                      target="_blank"
+                      className="text-gray-400 hover:text-sky-400 transition-colors"
+                    >
+                      <TwitterIcon size={20} />
+                    </a>
+                  )}
+                  {participante.social.website && (
+                    <a
+                      href={participante.social.website}
+                      target="_blank"
+                      className="text-gray-400 hover:text-gray-300 transition-colors"
+                    >
+                      <Globe size={20} />
+                    </a>
+                  )}
                 </div>
               </CardContent>
             </Card>

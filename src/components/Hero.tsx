@@ -2,7 +2,6 @@ import { Button } from './ui/button';
 import { Calendar, MapPin } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { motion } from 'motion/react';
-import Prism from './Prism';
 import { useGlitch } from 'react-powerglitch';
 
 export function Hero() {
@@ -86,7 +85,7 @@ export function Hero() {
                 <Button 
                   size="lg"
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-3"
-                  onClick={() => window.open('https://forms.gle/TGJ6ErsBtDmYqmp66', '_blank')}
+                  onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSf435wtiOgvmrIXR3Z9a44Ikgw3rjx7rK9lSG2HL83eSD0weA/viewform?usp=sharing&ouid=112873183507119668479', '_blank')}
                 >
                   Inscreva-se Gratuitamente
                 </Button>

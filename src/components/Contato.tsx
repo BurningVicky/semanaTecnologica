@@ -15,95 +15,54 @@ export function Contato() {
     toast.success("Mensagem enviada com sucesso!");
     reset(); 
   }
-    
-    // Criando glitch para imagem e CTAs
-    const glitchImage = useGlitch({
-      playMode: 'hover',
-      createContainers: true,
-      hideOverflow: true,
-      glitchTimeSpan: false,
-      slice: { count: 6, velocity: 10, minHeight: 0.05, maxHeight: 0.15 },
-      shake: { velocity: 10, amplitudeX: 0.2, amplitudeY: 0.2 },
-      pulse: false,
-    });
-  
-    const glitchCTA = useGlitch({
-      playMode: 'hover',
-      createContainers: true,
-      hideOverflow: true,
-      glitchTimeSpan: false,
-      slice: { count: 3, velocity: 8, minHeight: 0.05, maxHeight: 0.15 },
-      shake: { velocity: 5, amplitudeX: 0.1, amplitudeY: 0.1 },
-      pulse: false,
-    });
+
+  const glitchCTA = useGlitch({
+    playMode: 'hover',
+    createContainers: true,
+    hideOverflow: true,
+    glitchTimeSpan: false,
+    slice: { count: 3, velocity: 8, minHeight: 0.05, maxHeight: 0.15 },
+    shake: { velocity: 5, amplitudeX: 0.1, amplitudeY: 0.1 },
+    pulse: false,
+  });
 
   return (
-    <section id="contato" className="py-20">
-      <div className="absolute inset-0 bg-blue-50/50 backdrop-blur pointer-events-none -z-10"></div>
+    <section id="contato" className="relative py-20">
+      {/* Fundo translúcido com glassmorphism */}
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-50/40 to-purple-50/30 backdrop-blur-2xl pointer-events-none -z-10"></div>
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Contato</h2>
-          <p className="text-xl text-white max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white drop-shadow-lg mb-4">Contato</h2>
+          <p className="text-xl text-white/80 max-w-3xl mx-auto">
             Entre em contato conosco para esclarecer dúvidas, sugerir palestras ou obter mais informações sobre o evento.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Formulário de Contato */}
-          <Card>
+          <Card className="bg-white/30 backdrop-blur-md border border-white/40 shadow-md hover:shadow-xl transition-all duration-300">
             <CardHeader>
               <CardTitle>Envie uma Mensagem</CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <Label htmlFor="nome">Nome Completo</Label>
-                  <Input
-                    id="nome"
-                    name="nome"
-                    type="text"
-                    required
-                    placeholder="Seu nome completo"
-                  />
-                  <ValidationError 
-                    prefix="Nome" 
-                    field="nome"
-                    errors={state.errors}
-                  />
-                </div>
-                
-                <div>
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    placeholder="seu.email@exemplo.com"
-                  />
-                  <ValidationError 
-                    prefix="Email" 
-                    field="email"
-                    errors={state.errors}
-                  />
-                </div>
-                
-                <div>
-                  <Label htmlFor="assunto">Assunto</Label>
-                  <Input
-                    id="assunto"
-                    name="assunto"
-                    type="text"
-                    required
-                    placeholder="Sobre o que você gostaria de falar?"
-                  />
-                  <ValidationError 
-                    prefix="Assunto" 
-                    field="assunto"
-                    errors={state.errors}
-                  />
-                </div>
-                
+                {['nome', 'email', 'assunto'].map((field) => (
+                  <div key={field}>
+                    <Label htmlFor={field}>
+                      {field === 'nome' ? 'Nome Completo' : field === 'email' ? 'Email' : 'Assunto'}
+                    </Label>
+                    <Input
+                      id={field}
+                      name={field}
+                      type={field === 'email' ? 'email' : 'text'}
+                      required
+                      placeholder={field === 'nome' ? 'Seu nome completo' : field === 'email' ? 'seu.email@exemplo.com' : 'Sobre o que você gostaria de falar?'}
+                    />
+                    <ValidationError prefix={field} field={field} errors={state.errors} />
+                  </div>
+                ))}
+
                 <div>
                   <Label htmlFor="mensagem">Mensagem</Label>
                   <Textarea
@@ -113,11 +72,7 @@ export function Contato() {
                     placeholder="Descreva sua dúvida ou sugestão..."
                     className="min-h-[120px]"
                   />
-                  <ValidationError 
-                    prefix="Mensagem" 
-                    field="mensagem"
-                    errors={state.errors}
-                  />
+                  <ValidationError prefix="Mensagem" field="mensagem" errors={state.errors} />
                 </div>
                 
                 <Button type="submit" disabled={state.submitting} className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
@@ -126,68 +81,51 @@ export function Contato() {
               </form>
             </CardContent>
           </Card>
-        
+
           {/* Informações de Contato e Redes Sociais */}
           <div className="space-y-8">
-            <Card>
+            <Card className="bg-white/30 backdrop-blur-md border border-white/40 shadow-md hover:shadow-xl transition-all duration-300">
               <CardHeader>
                 <CardTitle>Informações de Contato</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <Mail className="text-blue-600 mt-1" size={20} />
-                  <div>
-                    <h4 className="font-semibold">Email</h4>
-                    <p className="text-gray-600">semanatecnologica@ucpel.edu.br</p>
-                    <p className="text-sm text-gray-500">Resposta em até 24 horas</p>
+              <CardContent className="space-y-6 text-gray-700">
+                {[
+                  { icon: <Mail className="text-blue-600 mt-1" size={20} />, title: 'Email', lines: ['semanatecnologica@ucpel.edu.br', 'Resposta em até 24 horas'] },
+                  { icon: <Phone className="text-green-600 mt-1" size={20} />, title: 'Telefone', lines: ['(53) 32123-3322', 'Segunda a sexta, 8h às 18h'] },
+                  { icon: <MapPin className="text-red-600 mt-1" size={20} />, title: 'Endereço', lines: ['Rua Gonçalves Chaves, 373', 'Centro - Pelotas/RS', 'CEP: 96015-560'] },
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start space-x-4">
+                    {item.icon}
+                    <div>
+                      <h4 className="font-semibold">{item.title}</h4>
+                      {item.lines.map((line, idx) => (
+                        <p key={idx} className={idx === item.lines.length - 1 ? "text-sm text-gray-500" : ""}>{line}</p>
+                      ))}
+                    </div>
                   </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <Phone className="text-green-600 mt-1" size={20} />
-                  <div>
-                    <h4 className="font-semibold">Telefone</h4>
-                    <p className="text-gray-600">(53) 32123-3322</p>
-                    <p className="text-sm text-gray-500">Segunda a sexta, 8h às 18h</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <MapPin className="text-red-600 mt-1" size={20} />
-                  <div>
-                    <h4 className="font-semibold">Endereço</h4>
-                    <p className="text-gray-600">Rua Gonçalves Chaves, 373</p>
-                    <p className="text-gray-600">Centro - Pelotas/RS</p>
-                    <p className="text-gray-600">CEP: 96015-560</p>
-                  </div>
-                </div>
+                ))}
               </CardContent>
             </Card>
-<div ref={glitchCTA.ref}></div>
+
             {/* Redes Sociais */}
-            <Card>
+            <Card className="bg-white/30 backdrop-blur-md border border-white/40 shadow-md hover:shadow-xl transition-all duration-300">
               <CardHeader>
                 <CardTitle>Redes Sociais</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">Siga-nos nas redes sociais para ficar por dentro de todas as novidades:</p>
+                <p className="text-gray-700 mb-4">Siga-nos nas redes sociais para ficar por dentro de todas as novidades:</p>
                 <div className="grid grid-cols-2 gap-4">
-                  <a ref={glitchCTA.ref} href="https://www.facebook.com/UCPel" target="__blank" className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
-                    <Facebook className="text-blue-600" size={20} />
-                    <span className="text-blue-600">Facebook</span>
-                  </a>
-                  <a ref={glitchCTA.ref} href="https://www.instagram.com/ucpel" target="__blank"className="flex items-center space-x-3 p-3 bg-pink-50 rounded-lg hover:bg-pink-100 transition-colors">
-                    <Instagram className="text-pink-600" size={20} />
-                    <span className="text-pink-600">Instagram</span>
-                  </a>
-                  <a ref={glitchCTA.ref} href="https://www.linkedin.com/school/ucpel/posts/?feedView=all" target="__blank" className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
-                    <Linkedin className="text-blue-700" size={20} />
-                    <span className="text-blue-700">LinkedIn</span>
-                  </a>
-                  <a ref={glitchCTA.ref} href="https://x.com/ucpel" target="__blank" className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
-                    <Twitter className="text-blue-500" size={20} />
-                    <span className="text-blue-500">Twitter</span>
-                  </a>
+                  {[
+                    { href: "https://www.facebook.com/UCPel", icon: <Facebook className="text-blue-600" size={20} />, label: "Facebook", color: "bg-blue-50 hover:bg-blue-100" },
+                    { href: "https://www.instagram.com/ucpel", icon: <Instagram className="text-pink-600" size={20} />, label: "Instagram", color: "bg-pink-50 hover:bg-pink-100" },
+                    { href: "https://www.linkedin.com/school/ucpel/posts/?feedView=all", icon: <Linkedin className="text-blue-700" size={20} />, label: "LinkedIn", color: "bg-blue-50 hover:bg-blue-100" },
+                    { href: "https://x.com/ucpel", icon: <Twitter className="text-blue-500" size={20} />, label: "Twitter", color: "bg-blue-50 hover:bg-blue-100" },
+                  ].map((item, idx) => (
+                    <a key={idx} ref={glitchCTA.ref} href={item.href} target="__blank" className={`flex items-center space-x-3 p-3 ${item.color} rounded-lg transition-colors`}>
+                      {item.icon}
+                      <span className={`${item.color.split(' ')[0] === 'bg-blue-50' ? 'text-blue-600' : 'text-pink-600'}`}>{item.label}</span>
+                    </a>
+                  ))}
                 </div>
               </CardContent>
             </Card>
@@ -196,7 +134,7 @@ export function Contato() {
 
         {/* Mapa */}
         <div className="mt-16">
-          <Card>
+          <Card className="bg-white/30 backdrop-blur-md border border-white/40 shadow-md hover:shadow-xl transition-all duration-300">
             <CardHeader>
               <CardTitle>Localização</CardTitle>
             </CardHeader>
@@ -214,8 +152,8 @@ export function Contato() {
                   className="rounded-lg"
                 ></iframe>
               </div>
-              <div className="mt-4 text-center">
-                <p className="text-gray-600">
+              <div className="mt-4 text-center text-gray-700">
+                <p>
                   O evento será realizado no campus principal da Universidade Católica de Pelotas, 
                   localizada no centro da cidade com fácil acesso por transporte público.
                 </p>
