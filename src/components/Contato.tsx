@@ -28,31 +28,33 @@ export function Contato() {
 
   return (
     <section id="contato" className="relative py-20">
+
       {/* Fundo translúcido com glassmorphism */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-50/40 to-purple-50/30 backdrop-blur-2xl pointer-events-none -z-10"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white drop-shadow-lg mb-4">Contato</h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold drop-shadow-lg mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-conthrax">Contato</h2>
+          <p className="text-xl text-white max-w-3xl mx-auto">
             Entre em contato conosco para esclarecer dúvidas, sugerir palestras ou obter mais informações sobre o evento.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Formulário de Contato */}
-          <Card className="bg-white/30 backdrop-blur-md border border-white/40 shadow-md hover:shadow-xl transition-all duration-300">
+          <Card className="bg-white/10 backdrop-blur-md border border-white/40 shadow-md hover:shadow-xl transition-all duration-300">
             <CardHeader>
-              <CardTitle>Envie uma Mensagem</CardTitle>
+              <CardTitle className="text-xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">Envie uma Mensagem</CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6 text-xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text leading-tight">
                 {['nome', 'email', 'assunto'].map((field) => (
                   <div key={field}>
                     <Label htmlFor={field}>
                       {field === 'nome' ? 'Nome Completo' : field === 'email' ? 'Email' : 'Assunto'}
                     </Label>
                     <Input
+                    
                       id={field}
                       name={field}
                       type={field === 'email' ? 'email' : 'text'}
@@ -64,7 +66,7 @@ export function Contato() {
                 ))}
 
                 <div>
-                  <Label htmlFor="mensagem">Mensagem</Label>
+                  <Label className="text-xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight" htmlFor="mensagem">Mensagem</Label>
                   <Textarea
                     id="mensagem"
                     name="mensagem"
@@ -84,11 +86,11 @@ export function Contato() {
 
           {/* Informações de Contato e Redes Sociais */}
           <div className="space-y-8">
-            <Card className="bg-white/30 backdrop-blur-md border border-white/40 shadow-md hover:shadow-xl transition-all duration-300">
+            <Card className="bg-white/10 backdrop-blur-md border border-white/40 shadow-md hover:shadow-xl transition-all duration-300">
               <CardHeader>
-                <CardTitle>Informações de Contato</CardTitle>
+                <CardTitle className="text-xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">Informações de Contato</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6 text-gray-700">
+              <CardContent className="space-y-6 text-white">
                 {[
                   { icon: <Mail className="text-blue-600 mt-1" size={20} />, title: 'Email', lines: ['semanatecnologica@ucpel.edu.br', 'Resposta em até 24 horas'] },
                   { icon: <Phone className="text-green-600 mt-1" size={20} />, title: 'Telefone', lines: ['(53) 32123-3322', 'Segunda a sexta, 8h às 18h'] },
@@ -99,7 +101,7 @@ export function Contato() {
                     <div>
                       <h4 className="font-semibold">{item.title}</h4>
                       {item.lines.map((line, idx) => (
-                        <p key={idx} className={idx === item.lines.length - 1 ? "text-sm text-gray-500" : ""}>{line}</p>
+                        <p key={idx} className={idx === item.lines.length - 1 ? "text-sm text-white" : ""}>{line}</p>
                       ))}
                     </div>
                   </div>
@@ -108,12 +110,12 @@ export function Contato() {
             </Card>
 
             {/* Redes Sociais */}
-            <Card className="bg-white/30 backdrop-blur-md border border-white/40 shadow-md hover:shadow-xl transition-all duration-300">
+            <Card className="bg-white/10 backdrop-blur-md border border-white/40 shadow-md hover:shadow-xl transition-all duration-300">
               <CardHeader>
-                <CardTitle>Redes Sociais</CardTitle>
+                <CardTitle className="text-xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">Redes Sociais</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-700 mb-4">Siga-nos nas redes sociais para ficar por dentro de todas as novidades:</p>
+                <p className="text-white mb-4">Siga-nos nas redes sociais para ficar por dentro de todas as novidades:</p>
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     { href: "https://www.facebook.com/UCPel", icon: <Facebook className="text-blue-600" size={20} />, label: "Facebook", color: "bg-blue-50 hover:bg-blue-100" },
@@ -136,7 +138,7 @@ export function Contato() {
         <div className="mt-16">
           <Card className="bg-white/30 backdrop-blur-md border border-white/40 shadow-md hover:shadow-xl transition-all duration-300">
             <CardHeader>
-              <CardTitle>Localização</CardTitle>
+              <CardTitle className="text-xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">Localização</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="aspect-w-16 aspect-h-9">
@@ -152,7 +154,7 @@ export function Contato() {
                   className="rounded-lg"
                 ></iframe>
               </div>
-              <div className="mt-4 text-center text-gray-700">
+              <div className="mt-4 text-center text-white">
                 <p>
                   O evento será realizado no campus principal da Universidade Católica de Pelotas, 
                   localizada no centro da cidade com fácil acesso por transporte público.

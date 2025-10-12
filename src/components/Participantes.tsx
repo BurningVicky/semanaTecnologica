@@ -80,7 +80,7 @@ export function Participantes() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">
+          <h2 className="text-5xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-conthrax">
             Participantes
           </h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
@@ -102,7 +102,7 @@ export function Participantes() {
                 />
               </div>
               <CardContent className="p-6 text-white">
-                <h3 className="text-lg font-semibold mb-1">{participante.nome}</h3>
+                <h3 className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight text-lg font-conthrax mb-1">{participante.nome}</h3>
                 <div className="mb-4">
                   <Badge
                     variant="outline"

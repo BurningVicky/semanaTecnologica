@@ -66,7 +66,7 @@ export function Programacao() {
     <section id="programacao" className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Programação</h2>
+          <h2 className="text-6xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-conthrax">Programação</h2>
           <p className="text-xl text-white max-w-3xl mx-auto">
             Confira a programação completa da 11ª Semana Tecnológica.
           </p>
@@ -75,28 +75,27 @@ export function Programacao() {
         <Card className="hover:shadow-lg transition-shadow duration-300 bg-white/10 backdrop-blur border border-white/10">
           <CardHeader>
             <CardTitle className="flex items-center justify-between text-white">
-              <span>Grade de Atividades</span>
-              <Badge variant="outline" className="bg-indigo-900 text-indigo-100">2025</Badge>
+              <Badge variant="outline" className="bg-indigo-900 text-white">2025</Badge>
             </CardTitle>
           </CardHeader>
           <CardContent>
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Data</TableHead>
-                  <TableHead>Horário</TableHead>
-                  <TableHead>Programação</TableHead>
-                  <TableHead>Ministrante(s)</TableHead>
-                  <TableHead>Local / Formato</TableHead>
+                  <TableHead className="font-conthrax bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">Data</TableHead>
+                  <TableHead className="font-conthrax bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">Horário</TableHead>
+                  <TableHead className="font-conthrax bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">Programação</TableHead>
+                  <TableHead className="font-conthrax bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">Ministrante(s)</TableHead>
+                  <TableHead className="font-conthrax bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">Local / Formato</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {programacaoOficial.map((item, index) => (
                   <TableRow key={index}>
-                    <TableCell className="font-mono text-sm">{item.data}</TableCell>
-                    <TableCell className="font-mono text-sm">{item.horario}</TableCell>
-                    <TableCell>{item.atividade}</TableCell>
-                    <TableCell className="text-sm text-gray-200">{item.ministrante}</TableCell>
+                    <TableCell className="font-mono text-sm text-white">{item.data}</TableCell>
+                    <TableCell className="font-mono text-sm text-white">{item.horario}</TableCell>
+                    <TableCell className="text-white">{item.atividade}</TableCell>
+                    <TableCell className="font-conthrax text-sm text-white">{item.ministrante}</TableCell>
                     <TableCell className="text-sm text-gray-200">{item.local}</TableCell>
                   </TableRow>
                 ))}

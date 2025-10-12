@@ -56,7 +56,7 @@ export function Sobre() {
         <div className="text-center mb-20">
           <h2
             
-            className="text-5xl text-white font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-blue-400"
+            className="text-5xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-conthrax"
           >
             15th CASSW 2025 está chegando!
           </h2>
@@ -81,7 +81,7 @@ export function Sobre() {
 
         {/* Seção "Sobre o Evento" */}
         <div className="text-center mb-16">
-          <h3 className="text-4xl font-bold mb-4 text-white">Sobre o Evento</h3>
+          <h3 className="text-5xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-conthrax">Sobre o Evento</h3>
           <p className="text-lg text-white max-w-3xl mx-auto">
             A <strong>11ª Semana Tecnológica UCPEL</strong>, promovida pelos cursos do Centro de Ciências Sociais e Tecnológicas, será realizada entre os dias <strong>9 e 13 de novembro de 2025</strong>.  
             A abertura ocorrerá no auditório da Universidade Católica de Pelotas, e as demais atividades noturnas também serão transmitidas via Google Meet.
@@ -106,7 +106,7 @@ export function Sobre() {
 
         {/* Minicurso em destaque */}
         <div className="mt-16 bg-white/10 border border-white/10 rounded-xl p-8 text-left backdrop-blur-sm">
-          <h4 className="text-2xl font-semibold text-indigo-300 mb-4">
+          <h4 className="text-2xl lg:text-2xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-conthrax">
             Minicurso em Destaque
           </h4>
           <h5 className="text-xl font-bold text-white mb-2">
@@ -137,4 +137,4 @@ export function Sobre() {
         </div>
 
         {/* O que esperar */}
-        <div className="rounded-lg p-8 shadow-md pt-12"> <h3 className="text-2xl font-semibold mb-6 pt-12 text-white">O que esperar?</h3> <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> <div> <h4 className="text-lg font-semibold mb-4 text-blue-400">Palestras Inspiradoras</h4> <p className="text-white mb-4"> Especialistas renomados compartilhando conhecimentos sobre IA, desenvolvimento web, segurança digital, e muito mais. </p> </div> <div> <h4 className="text-lg font-semibold mb-4 text-purple-400">Workshops Práticos</h4> <p className="text-white mb-4"> Sessões hands-on para aprender novas tecnologias e ferramentas do mercado. </p> </div> <div> <h4 className="text-lg font-semibold mb-4 text-green-400">Área de Exposição</h4> <p className="text-white mb-4"> Empresas parceiras apresentando suas soluções e oportunidades de carreira. </p> </div>  </div> </div> </div> </section> ); }
+        <div className="rounded-lg p-8 shadow-md pt-12"> <h3 className="text-2xl lg:text-2xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-conthrax">O que esperar?</h3> <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> <div> <h4 className="text-lg font-semibold mb-4 text-blue-400">Palestras Inspiradoras</h4> <p className="text-white mb-4"> Especialistas renomados compartilhando conhecimentos sobre IA, desenvolvimento web, segurança digital, e muito mais. </p> </div> <div> <h4 className="text-lg font-semibold mb-4 text-purple-400">Workshops Práticos</h4> <p className="text-white mb-4"> Sessões hands-on para aprender novas tecnologias e ferramentas do mercado. </p> </div> <div> <h4 className="text-lg font-semibold mb-4 text-green-400">Área de Exposição</h4> <p className="text-white mb-4"> Empresas parceiras apresentando suas soluções e oportunidades de carreira. </p> </div>  </div> </div> </div> </section> ); }

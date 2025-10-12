@@ -37,6 +37,7 @@ export function Header() {
     pulse: false,
   });
 
+
   return (
     <motion.header 
       className="bg-white/80 backdrop-blur-md border-b border-white/20 fixed top-0 left-0 right-0 z-50 shadow-lg"
@@ -118,7 +119,7 @@ export function Header() {
           </motion.div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden" ref={glitchCTA1.ref}>
+          <div className="md:hidden">
             <motion.button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-blue-600 p-2 rounded-lg"
@@ -136,7 +137,7 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <motion.div ref={glitchCTA1.ref}
+          <motion.div
             className="md:hidden"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}

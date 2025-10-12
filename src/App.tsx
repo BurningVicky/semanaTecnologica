@@ -29,7 +29,7 @@ export default function App() {
             height={2.5}
             baseWidth={3.8}
             scale={2.6}
-            hueShift={0.5}
+            hueShift={1}
             colorFrequency={1}
             noise={0}
             glow={1}

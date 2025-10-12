@@ -3,6 +3,7 @@ import { Calendar, MapPin } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { motion } from 'motion/react';
 import { useGlitch } from 'react-powerglitch';
+import DecryptedText from './DecryptedText';
 
 export function Hero() {
   // Criando glitch para imagem e CTAs
@@ -43,6 +44,7 @@ export function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
+          
           {/* Content */}
           <motion.div 
             className="text-white"
@@ -51,14 +53,24 @@ export function Hero() {
             transition={{ duration: 0.8 }}
           >
             <motion.h1 
-              className="text-5xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-conthrax"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
-            >
-              11ª Semana Tecnológica
-              do Chip à Nuvem
-            </motion.h1>
+                  className="text-5xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-conthrax"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                >
+                  <DecryptedText
+                    text="11ª Semana Tecnológica do Chip à Nuvem"
+                    speed={80}
+                    sequential={true}
+                    maxIterations={20}
+                    characters="QCvDa5S10LOpJfX#$&SabB!?"
+                    className="revealed bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-conthrax"
+                    parentClassName="all-letters"
+                    encryptedClassName="encrypted"
+                    animateOn="both"
+                  />
+                </motion.h1>
+
             <p className="text-xl mb-8 text-gray-200">
               O maior evento de tecnologia da região sul! Palestras, workshops e networking 
               com os principais especialistas do setor tecnológico.

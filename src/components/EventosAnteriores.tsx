@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { ExternalLink, Calendar, Users, Award, ChevronLeft, ChevronRight } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { useGlitch } from 'react-powerglitch';
 
 export function EventosAnteriores() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -61,6 +62,16 @@ export function EventosAnteriores() {
     satisfacao: '99%'
   };
 
+  const glitchCTA1 = useGlitch({
+      playMode: 'hover',
+      createContainers: true,
+      hideOverflow: true,
+      glitchTimeSpan: false,
+      slice: { count: 3, velocity: 8, minHeight: 0.05, maxHeight: 0.15 },
+      shake: { velocity: 5, amplitudeX: 0.1, amplitudeY: 0.1 },
+      pulse: false,
+    });
+
   return (
     <section id="eventos-anteriores" className="relative py-20 bg-transparent overflow-hidden">
       {/* Camada de fundo com glassmorphism */}
@@ -68,8 +79,8 @@ export function EventosAnteriores() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white drop-shadow-lg mb-4">Eventos Anteriores</h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <h2 className="text-5xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-conthrax">Eventos Anteriores</h2>
+          <p className="text-xl text-white max-w-3xl mx-auto">
             Relembre as edições passadas da Semana Tecnológica e veja como o evento tem crescido ao longo dos anos.
           </p>
         </div>
@@ -87,7 +98,7 @@ export function EventosAnteriores() {
                 {item.icon}
               </div>
               <div className="text-3xl font-bold text-gray-900">{item.valor}</div>
-              <div className="text-gray-700">{item.label}</div>
+              <div className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">{item.label}</div>
             </div>
           ))}
         </div>
@@ -95,7 +106,7 @@ export function EventosAnteriores() {
         {/* Cards dos Eventos */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {eventosAnteriores.map((evento, index) => (
-            <Card key={index} className="bg-white/30 backdrop-blur-md border border-white/40 hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <Card key={index} className="bg-white/10 backdrop-blur-md border border-white/40 hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="aspect-w-16 aspect-h-9">
                 <ImageWithFallback 
                   src={evento.imagem}
@@ -104,36 +115,36 @@ export function EventosAnteriores() {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="flex items-center justify-between text-gray-900">
+                <CardTitle className="flex items-center justify-between bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight text-2xl font-conthrax">
                   <span>{evento.titulo}</span>
                   <span className="text-lg font-normal text-blue-600">{evento.ano}</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center space-x-4 text-sm text-gray-600 mb-4">
-                  <div className="flex items-center space-x-1">
+                  <div className="text-white flex items-center space-x-1">
                     <Calendar size={16} />
                     <span>{evento.data}</span>
                   </div>
-                  <div className="flex items-center space-x-1">
+                  <div className="text-white flex items-center space-x-1">
                     <Users size={16} />
                     <span>{evento.participantes} participantes</span>
                   </div>
-                  <div className="flex items-center space-x-1">
+                  <div className="text-white flex items-center space-x-1">
                     <Award size={16} />
                     <span>{evento.palestras} palestras</span>
                   </div>
                 </div>
                 
-                <p className="text-gray-700 mb-4">{evento.descricao}</p>
+                <p className="text-white mb-4">{evento.descricao}</p>
                 
                 <div className="mb-6">
-                  <h4 className="font-semibold mb-3 text-gray-900">Principais Destaques:</h4>
+                  <h4 className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-semibold mb-3 text-gray-900">Principais Destaques:</h4>
                   <ul className="space-y-2">
                     {evento.highlights.map((highlight, highlightIndex) => (
                       <li key={highlightIndex} className="flex items-start space-x-2">
                         <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-700 text-sm">{highlight}</span>
+                        <span className="text-white text-sm">{highlight}</span>
                       </li>
                     ))}
                   </ul>
@@ -154,7 +165,7 @@ export function EventosAnteriores() {
 
         {/* Galeria de Fotos - Slider */}
         <div className="bg-white/30 backdrop-blur-lg rounded-2xl p-8 shadow-lg border border-white/40">
-          <h3 className="text-2xl font-semibold text-center mb-8 text-gray-900">Galeria de Momentos</h3>
+          <h3 className="text-2xl font-semibold text-center mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-conthrax">Galeria de Momentos</h3>
           <div className="relative">
             <div className="overflow-hidden rounded-lg">
               <div 
@@ -209,17 +220,19 @@ export function EventosAnteriores() {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="bg-white/20 backdrop-blur-md border border-white/40 rounded-2xl p-8 text-white shadow-lg">
-            <h3 className="text-2xl font-semibold mb-4">Faça Parte da História!</h3>
+            <h3 className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-conthrax text-2xl font-semibold mb-4">Faça Parte da História!</h3>
             <p className="text-xl mb-6">
               Participe da edição 2025 e seja parte do maior evento de tecnologia da região.
             </p>
-            <Button 
-              size="lg"
-              className="bg-white/20 border-2 border-white text-white hover:bg-white hover:text-blue-900 backdrop-blur-sm"
-              onClick={() => window.open('https://forms.gle/TGJ6ErsBtDmYqmp66', '_blank')}
-            >
-              Inscreva-se Agora
-            </Button>
+            <div ref={glitchCTA1.ref}>
+                <Button 
+                  size="lg"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-3"
+                  onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSf435wtiOgvmrIXR3Z9a44Ikgw3rjx7rK9lSG2HL83eSD0weA/viewform?usp=sharing&ouid=112873183507119668479', '_blank')}
+                >
+                  Inscreva-se Gratuitamente
+                </Button>
+                </div>
           </div>
         </div>
       </div>

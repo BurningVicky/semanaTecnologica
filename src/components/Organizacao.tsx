@@ -53,13 +53,15 @@ export function Organizacao() {
 
   return (
     <section id="organizacao" className="relative py-24 overflow-hidden">
+
       {/* Fundo translúcido com blur e gradiente animado */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-indigo-900/60 via-purple-900/50 to-transparent backdrop-blur-xl animate-gradient" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+
         {/* Título principal */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">
+          <h2 className="text-5xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-conthrax">
             Organização
           </h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
@@ -69,7 +71,7 @@ export function Organizacao() {
 
         {/* Comitê Organizador */}
         <div className="mb-20">
-          <h3 className="text-2xl font-semibold text-center text-purple-200 mb-12">
+          <h3 className="text-2xl lg:text-3xl font-semibold text-center text-purple-200 mb-12 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">
             Comitê Organizador
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -86,7 +88,7 @@ export function Organizacao() {
                   />
                 </div>
                 <CardContent className="p-6 text-white">
-                  <h4 className="font-semibold text-lg mb-1">{organizador.nome}</h4>
+                  <h4 className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-semibold text-lg mb-1">{organizador.nome}</h4>
                   <p className="text-purple-300 text-sm mb-1">{organizador.cargo}</p>
                   <p className="text-gray-300 text-sm mb-3">{organizador.titulacao}</p>
 
@@ -117,7 +119,7 @@ export function Organizacao() {
 
         {/* Docentes e Colaboradores */}
         <div className="mb-20">
-          <h3 className="text-2xl font-semibold text-center text-purple-200 mb-8">
+          <h3 className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight text-2xl font-semibold text-center text-purple-200 mb-8">
             Docentes / Colaboradores
           </h3>
           <div className="overflow-x-auto rounded-xl bg-white/10 backdrop-blur-md border border-white/20">
@@ -142,10 +144,10 @@ export function Organizacao() {
           </div>
         </div>
 
-        {/* Comissão Organizadora – Acadêmicos */}
+        {/* Comissão Organizadora */}
         <div className="mb-20">
-          <h3 className="text-2xl font-semibold text-center text-purple-200 mb-8">
-            Comissão Organizadora – Acadêmicos UCPel
+          <h3 className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight text-2xl font-semibold text-center text-purple-200 mb-8">
+            Comissão Organizadora
           </h3>
           <div className="overflow-x-auto rounded-xl bg-white/10 backdrop-blur-md border border-white/20">
             <table className="w-full text-sm text-gray-200">
@@ -171,7 +173,7 @@ export function Organizacao() {
 
         {/* Instituições */}
         <div>
-          <h3 className="text-2xl font-semibold text-center text-purple-200 mb-12">
+          <h3 className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight text-2xl font-semibold text-center text-purple-200 mb-12">
             Instituições Parceiras
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
