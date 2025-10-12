@@ -2,22 +2,49 @@ import { Button } from './ui/button';
 import { Calendar, MapPin } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { motion } from 'motion/react';
+import { useGlitch } from 'react-powerglitch';
+import DecryptedText from './DecryptedText';
 
 export function Hero() {
+  // Criando glitch para imagem e CTAs
+  const glitchImage = useGlitch({
+    playMode: 'hover',
+    createContainers: true,
+    hideOverflow: true,
+    glitchTimeSpan: false,
+    slice: { count: 6, velocity: 10, minHeight: 0.05, maxHeight: 0.15 },
+    shake: { velocity: 10, amplitudeX: 0.2, amplitudeY: 0.2 },
+    pulse: false,
+  });
+
+  const glitchCTA1 = useGlitch({
+    playMode: 'hover',
+    createContainers: true,
+    hideOverflow: true,
+    glitchTimeSpan: false,
+    slice: { count: 3, velocity: 8, minHeight: 0.05, maxHeight: 0.15 },
+    shake: { velocity: 5, amplitudeX: 0.1, amplitudeY: 0.1 },
+    pulse: false,
+  });
+
+  const glitchCTA2 = useGlitch({
+    playMode: 'hover',
+    createContainers: true,
+    hideOverflow: true,
+    glitchTimeSpan: false,
+    slice: { count: 3, velocity: 8, minHeight: 0.05, maxHeight: 0.15 },
+    shake: { velocity: 5, amplitudeX: 0.1, amplitudeY: 0.1 },
+    pulse: false,
+  });
+
   return (
-    <section className="pt-16 min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0">
-        <ImageWithFallback 
-          src={`${import.meta.env.BASE_URL}/img/techBg1.png`}
-          alt="Tech Background"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/50" /> {/* overlay */}
-      </div>
+    <section className="pt-16 min-h-screen relative overflow-hidden">
+      
+        
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
+          
           {/* Content */}
           <motion.div 
             className="text-white"
@@ -26,13 +53,24 @@ export function Hero() {
             transition={{ duration: 0.8 }}
           >
             <motion.h1 
-              className="text-5xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-conthrax"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
-            >
-              Semana Tecnológica
-            </motion.h1>
+                  className="text-5xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-conthrax"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                >
+                  <DecryptedText
+                    text="11ª Semana Tecnológica do Chip à Nuvem"
+                    speed={80}
+                    sequential={true}
+                    maxIterations={20}
+                    characters="QCvDa5S10LOpJfX#$&SabB!?"
+                    className="revealed bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-conthrax"
+                    parentClassName="all-letters"
+                    encryptedClassName="encrypted"
+                    animateOn="both"
+                  />
+                </motion.h1>
+
             <p className="text-xl mb-8 text-gray-200">
               O maior evento de tecnologia da região sul! Palestras, workshops e networking 
               com os principais especialistas do setor tecnológico.
@@ -41,7 +79,7 @@ export function Hero() {
             <div className="space-y-4 mb-8">
               <div className="flex items-center space-x-3">
                 <Calendar className="text-blue-400" size={20} />
-                <span className="text-lg">12 a 15 de Novembro de 2025</span>
+                <span className="text-lg">9 a 13 de Novembro de 2025</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="text-purple-400" size={20} />
@@ -55,24 +93,28 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Button 
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-3"
-                onClick={() => window.open('https://forms.gle/TGJ6ErsBtDmYqmp66', '_blank')}
-              >
-                Inscreva-se Gratuitamente
-              </Button>
-              <Button 
-                size="lg"
-                className="bg-white/10 border-2 border-white text-white hover:bg-white hover:text-blue-900 text-lg px-8 py-3 backdrop-blur-sm"
-                onClick={() => document.getElementById('sobre')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Saiba Mais
-              </Button>
+              <div ref={glitchCTA1.ref}>
+                <Button 
+                  size="lg"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-3"
+                  onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSf435wtiOgvmrIXR3Z9a44Ikgw3rjx7rK9lSG2HL83eSD0weA/viewform?usp=sharing&ouid=112873183507119668479', '_blank')}
+                >
+                  Inscreva-se Gratuitamente
+                </Button>
+              </div>
+              <div ref={glitchCTA2.ref}>
+                <Button 
+                  size="lg"
+                  className="bg-white/10 border-2 border-white text-white hover:bg-white hover:text-blue-900 text-lg px-8 py-3 backdrop-blur-sm"
+                  onClick={() => document.getElementById('sobre')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Saiba Mais
+                </Button>
+              </div>
             </motion.div>
           </motion.div>
 
-          {/* VR Image */}
+          {/* VR Image com glitch */}
           <motion.div 
             className="relative"
             initial={{ opacity: 0, x: 50 }}
@@ -88,11 +130,13 @@ export function Hero() {
               }}
               transition={{ duration: 0.3 }}
             >
-              <ImageWithFallback 
-                src={`${import.meta.env.BASE_URL}/img/animeCharMetaVRLG.jpg`}
-                alt="Mulher utilizando equipamento VR em um mundo Synthwave"
-                 className="w-full h-auto rounded-lg shadow-2xl transition-all duration-300 hover:opacity-50 opacity-100"
-              />
+              <div ref={glitchImage.ref}>
+                <ImageWithFallback 
+                  src={`${import.meta.env.BASE_URL}/img/animeCharMetaVRLG.jpg`}
+                  alt="Mulher utilizando equipamento VR em um mundo Synthwave"
+                  className="w-full h-auto rounded-lg shadow-2xl transition-all duration-300 hover:opacity-50 opacity-100"
+                />
+              </div>
             </motion.div>
             {/* Glow effect */}
             <motion.div 

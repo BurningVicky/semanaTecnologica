@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from './ui/button';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'motion/react';
+import { useGlitch } from 'react-powerglitch';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,6 +15,28 @@ export function Header() {
     { name: 'Eventos Anteriores', href: '#eventos-anteriores' },
     { name: 'Contato', href: '#contato' }
   ];
+
+  // Criando glitch para CTAs e logo
+  const glitchCTA1 = useGlitch({
+    playMode: 'hover',
+    createContainers: true,
+    hideOverflow: true,
+    glitchTimeSpan: false,
+    slice: { count: 3, velocity: 8, minHeight: 0.05, maxHeight: 0.15 },
+    shake: { velocity: 5, amplitudeX: 0.1, amplitudeY: 0.1 },
+    pulse: false,
+  });
+
+  const glitchImage = useGlitch({
+    playMode: 'hover',
+    createContainers: true,
+    hideOverflow: true,
+    glitchTimeSpan: false,
+    slice: { count: 6, velocity: 10, minHeight: 0.05, maxHeight: 0.15 },
+    shake: { velocity: 10, amplitudeX: 0.2, amplitudeY: 0.2 },
+    pulse: false,
+  });
+
 
   return (
     <motion.header 
@@ -34,6 +57,7 @@ export function Header() {
               <a href={import.meta.env.BASE_URL} className="block">
                 <img 
                 src={`${import.meta.env.BASE_URL}/img/UCPLG.png`}
+                ref={glitchImage.ref}
                 alt="Logo UCPEL" 
                 className="h-10 w-auto object-contain"
                 />
@@ -69,7 +93,7 @@ export function Header() {
           </nav>
 
           {/* CTA Button */}
-          <motion.div 
+          <motion.div ref={glitchCTA1.ref}
             className="hidden md:block"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -85,7 +109,7 @@ export function Header() {
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
             >
-              <Button 
+              <Button                
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg"
                 onClick={() => window.open('https://forms.gle/TGJ6ErsBtDmYqmp66', '_blank')}
               >
@@ -113,7 +137,7 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <motion.div 
+          <motion.div
             className="md:hidden"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}

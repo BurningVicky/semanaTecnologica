@@ -11,14 +11,11 @@ export function Footer() {
   ];
 
   const sponsors = [
-    { nome: 'UCPEL', tipo: 'Organizadora Principal' },
-    { nome: 'Lorem', tipo: 'Apoio Institucional' },
-    { nome: 'Lorem', tipo: 'Parceira' },
-    { nome: 'Lorem', tipo: 'Apoio' }
+    { nome: 'UCPEL', tipo: 'Organizadora Principal' }
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-blue-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo e Informações */}
@@ -95,20 +92,6 @@ export function Footer() {
               <a href="https://x.com/ucpel" target="__blank"  className="text-gray-300 hover:text-blue-400 transition-colors">
                 <Twitter size={24} />
               </a>
-            </div>
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Newsletter</h4>
-              <p className="text-sm mb-3">Receba atualizações sobre o evento</p>
-              <div className="flex">
-                <input 
-                  type="email" 
-                  placeholder="Seu email"
-                  className="flex-1 px-3 py-2 bg-white text-gray-900 rounded-l text-sm"
-                />
-                <button className="bg-gray-800 px-4 py-2 rounded-r text-sm hover:bg-gray-700 transition-colors">
-                  ✓
-                </button>
-              </div>
             </div>
           </div>
         </div>

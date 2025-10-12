@@ -3,116 +3,111 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '.
 import { Badge } from './ui/badge';
 
 export function Programacao() {
-  const programacaoTarde = [
-    { horario: '14:00 - 14:30', atividade: 'Credenciamento e Welcome Coffee', palestrante: 'Organização' },
-    { horario: '14:30 - 15:30', atividade: 'Inteligência Artificial: O Futuro é Agora', palestrante: 'A definir' },
-    { horario: '15:30 - 15:45', atividade: 'Coffee Break', palestrante: '-' },
-    { horario: '15:45 - 16:45', atividade: 'Desenvolvimento Web Moderno', palestrante: 'A definir' },
-    { horario: '16:45 - 17:00', atividade: 'Encerramento do Período', palestrante: 'Organização' }
+  const programacaoOficial = [
+    {
+      data: '09/11/2025',
+      horario: '19h às 22h',
+      atividade: 'Minicurso de Proteção Elétrica e Ensaios de Relés de Média Tensão',
+      ministrante: 'Henrique Völz',
+      local: 'D214 / Presencial',
+    },
+    {
+      data: '10/11/2025',
+      horario: '19h às 22h',
+      atividade: 'Minicurso de Proteção Elétrica e Ensaios de Relés de Média Tensão',
+      ministrante: 'Henrique Völz',
+      local: 'D214 / Presencial',
+    },
+    {
+      data: '11/11/2025',
+      horario: '19h15 às 20h30',
+      atividade: 'À definir',
+      ministrante: 'Ulisses Brisolara',
+      local: 'Via Meet',
+    },
+    {
+      data: '11/11/2025',
+      horario: '20h45 às 22h',
+      atividade: 'À definir',
+      ministrante: 'Adenauer Yamin',
+      local: 'Via Meet',
+    },
+    {
+      data: '12/11/2025',
+      horario: '19h15 às 20h30',
+      atividade: 'À definir',
+      ministrante: 'Mateus Grellert',
+      local: 'Via Meet',
+    },
+    {
+      data: '12/11/2025',
+      horario: '20h45 às 22h',
+      atividade: 'À definir',
+      ministrante: 'Geelsu Hwang',
+      local: 'Via Meet',
+    },
+    {
+      data: '13/11/2025',
+      horario: '19h15 às 20h30',
+      atividade: 'Analog Design in the IP business unit at Synopsys',
+      ministrante: 'Pedro Toledo',
+      local: 'Híbrido / C410',
+    },
+    {
+      data: '13/11/2025',
+      horario: '20h45 às 22h',
+      atividade: 'À definir',
+      ministrante: 'Leomar Rosa',
+      local: 'C410',
+    },
   ];
-
-  const programacaoNoite1 = [
-    { horario: '19:15 - 19:30', atividade: 'Recepção dos Participantes', palestrante: 'Organização' },
-    { horario: '19:30 - 20:30', atividade: 'Segurança Cibernética em 2025', palestrante: 'A definir' },
-    { horario: '20:30 - 20:45', atividade: 'Intervalo', palestrante: '-' },
-    { horario: '20:45 - 21:45', atividade: 'Cloud Computing e DevOps', palestrante: 'A definir' }
-  ];
-
-  const programacaoNoite2 = [
-    { horario: '19:15 - 19:30', atividade: 'Abertura da Noite', palestrante: 'Organização' },
-    { horario: '19:30 - 20:30', atividade: 'UX/UI Design: Criando Experiências', palestrante: 'A definir' },
-    { horario: '20:30 - 20:45', atividade: 'Pausa para Networking', palestrante: '-' },
-    { horario: '20:45 - 21:45', atividade: 'Blockchain e Criptomoedas', palestrante: 'A definir' }
-  ];
-
-  const programacaoNoite3 = [
-    { horario: '19:15 - 19:30', atividade: 'Início da Última Noite', palestrante: 'Organização' },
-    { horario: '19:30 - 20:30', atividade: 'Startups e Empreendedorismo Tech', palestrante: 'A definir' },
-    { horario: '20:30 - 20:45', atividade: 'Coffee Break Final', palestrante: '-' },
-    { horario: '20:45 - 21:45', atividade: 'Mesa Redonda: O Futuro da Tecnologia', palestrante: 'Painelistas' }
-  ];
-
-  const TableComponent = ({ title, data, day, badge }: { title: string, data: any[], day: string, badge: string }) => (
-    <Card className="hover:shadow-lg transition-shadow duration-300">
-      <CardHeader>
-        <CardTitle className="flex items-center justify-between">
-          <span>{title}</span>
-          <Badge variant="outline" className={badge}>{day}</Badge>
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead>Horário</TableHead>
-              <TableHead>Atividade</TableHead>
-              <TableHead>Palestrante</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {data.map((item, index) => (
-              <TableRow key={index}>
-                <TableCell className="font-mono text-sm">{item.horario}</TableCell>
-                <TableCell>{item.atividade}</TableCell>
-                <TableCell className="text-sm text-gray-600">{item.palestrante}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </CardContent>
-    </Card>
-  );
 
   return (
-    <section id="programacao" className="py-20 bg-white">
+    <section id="programacao" className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Programação</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Confira a programação completa dos 3 dias de evento com palestras vespertinas e noturnas.
+          <h2 className="text-6xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-conthrax">Programação</h2>
+          <p className="text-xl text-white max-w-3xl mx-auto">
+            Confira a programação completa da 11ª Semana Tecnológica.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <TableComponent 
-            title="Dia 1 - Tarde"
-            data={programacaoTarde}
-            day="12/11"
-            badge="bg-blue-100 text-blue-800"
-          />
-          
-          <TableComponent 
-            title="Dia 1 - Noite"
-            data={programacaoNoite1}
-            day="12/11"
-            badge="bg-blue-900 text-blue-100"
-          />
-          
-          <TableComponent 
-            title="Dia 2 - Noite"
-            data={programacaoNoite2}
-            day="13/11"
-            badge="bg-purple-900 text-purple-100"
-          />
-          
-          <TableComponent 
-            title="Dia 3 - Noite"
-            data={programacaoNoite3}
-            day="14/11"
-            badge="bg-green-900 text-green-100"
-          />
-        </div>
+        <Card className="hover:shadow-lg transition-shadow duration-300 bg-white/10 backdrop-blur border border-white/10">
+          <CardHeader>
+            <CardTitle className="flex items-center justify-between text-white">
+              <Badge variant="outline" className="bg-indigo-900 text-white">2025</Badge>
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="font-conthrax bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">Data</TableHead>
+                  <TableHead className="font-conthrax bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">Horário</TableHead>
+                  <TableHead className="font-conthrax bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">Programação</TableHead>
+                  <TableHead className="font-conthrax bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">Ministrante(s)</TableHead>
+                  <TableHead className="font-conthrax bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">Local / Formato</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {programacaoOficial.map((item, index) => (
+                  <TableRow key={index}>
+                    <TableCell className="font-mono text-sm text-white">{item.data}</TableCell>
+                    <TableCell className="font-mono text-sm text-white">{item.horario}</TableCell>
+                    <TableCell className="text-white">{item.atividade}</TableCell>
+                    <TableCell className="font-conthrax text-sm text-white">{item.ministrante}</TableCell>
+                    <TableCell className="text-sm text-gray-200">{item.local}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </CardContent>
+        </Card>
 
         <div className="mt-12 text-center">
-          <p className="text-gray-600 mb-4">
-            * A programação pode sofrer alterações. Mantenha-se atualizado através dos nossos canais oficiais.
+          <p className="text-white mb-4">
+            * A programação está sujeita a alterações. Acompanhe os canais oficiais da UCPEL para atualizações.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Badge variant="outline" className="bg-blue-50 text-blue-700">Palestras</Badge>
-            <Badge variant="outline" className="bg-green-50 text-green-700">Workshops</Badge>
-            <Badge variant="outline" className="bg-purple-50 text-purple-700">Mesa Redonda</Badge>
-            <Badge variant="outline" className="bg-orange-50 text-orange-700">Networking</Badge>
-          </div>
         </div>
       </div>
     </section>
