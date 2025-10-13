@@ -6,21 +6,18 @@ export function Organizacao() {
   const organizadores = [
     {
       nome: 'Morgana Macedo Azevedo da Rosa',
-      cargo: 'Coordenadora Geral',
       titulacao: 'Doutora - MEEC',
       linkedin: 'https://www.linkedin.com/in/morgana-macedo-547a21180/',
       image: `${import.meta.env.BASE_URL}/img/profMorgana.png`,
     },
     {
       nome: 'Leandro Zafalon Pieper',
-      cargo: 'Coordenador',
       titulacao: 'Doutor - CCST',
       linkedin: 'https://www.linkedin.com/in/leandro-zafalon-pieper-b88a5510/',
       image: `${import.meta.env.BASE_URL}/img/leandro.png`,
     },
     {
       nome: 'Lizandro de Souza Oliveira',
-      cargo: 'Coordenador',
       titulacao: 'Doutor - MEEC',
       linkedin: 'https://www.linkedin.com/in/lizandro-oliveira/',
       image: `${import.meta.env.BASE_URL}/img/lizandro.png`,

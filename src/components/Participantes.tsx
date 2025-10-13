@@ -17,10 +17,10 @@ export function Participantes() {
     {
       nome: 'Leomar Rosa',
       tema: 'A definir',
-      bio: 'Biografia do palestrante será adicionada em breve.',
-      image: `${import.meta.env.BASE_URL}/img/palestrante.png`,
+      bio: 'Doutorado em Microeletrônica pela Universidade Federal do Rio Grande do Sul (2008) com período sanduíche na Universidade de Minnesota - EUA (2005-2006), mestrado em Ciência da Computação pela Universidade Federal do Rio Grande do Sul (2004) e graduação em Ciência da Computação pela Universidade Federal de Pelotas (2001).',
+      image: `${import.meta.env.BASE_URL}/img/leomar.png`,
       social: {
-        linkedin: '#',
+        linkedin: 'http://lattes.cnpq.br/1423810014480514',
       },
     },
     {
@@ -63,7 +63,7 @@ export function Participantes() {
       nome: 'Henrique Völz',
       tema: 'Proteção Elétrica e Ensaios de Relés de Média Tensão',
       bio: 'Biografia do palestrante será adicionada em breve.',
-      image: `${import.meta.env.BASE_URL}/img/palestrante.png`,
+      image: `${import.meta.env.BASE_URL}/img/UCPLG2.png`,
       social: {
         linkedin: '#',
       },
