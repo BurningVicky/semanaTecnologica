@@ -111,7 +111,7 @@ export function Header() {
             >
               <Button                
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg"
-                onClick={() => window.open('https://forms.gle/TGJ6ErsBtDmYqmp66', '_blank')}
+                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSf435wtiOgvmrIXR3Z9a44Ikgw3rjx7rK9lSG2HL83eSD0weA/viewform?usp=sharing&ouid=112873183507119668479', '_blank')}
               >
                 Inscreva-se
               </Button>
@@ -171,7 +171,7 @@ export function Header() {
                 >
                   <Button 
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                    onClick={() => window.open('https://forms.gle/TGJ6ErsBtDmYqmp66', '_blank')}
+                    onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSf435wtiOgvmrIXR3Z9a44Ikgw3rjx7rK9lSG2HL83eSD0weA/viewform?usp=sharing&ouid=112873183507119668479', '_blank')}
                   >
                     Inscreva-se
                   </Button>
