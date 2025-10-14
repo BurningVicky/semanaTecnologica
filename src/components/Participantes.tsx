@@ -62,10 +62,10 @@ export function Participantes() {
     {
       nome: 'Henrique Völz',
       tema: 'Proteção Elétrica e Ensaios de Relés de Média Tensão',
-      bio: 'Biografia do palestrante será adicionada em breve.',
+      bio: 'Estudante de Engenharia Elétrica na Universidade Católica de Pelotas (UCPel).',
       image: `${import.meta.env.BASE_URL}/img/UCPLG2.png`,
       social: {
-        linkedin: '#',
+        linkedin: 'https://ucpel.edu.br',
       },
     },
   ];

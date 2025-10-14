@@ -83,7 +83,7 @@ export function Sobre() {
         <div className="text-center mb-16">
           <h3 className="text-5xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight font-conthrax">Sobre o Evento</h3>
           <p className="text-lg text-white max-w-3xl mx-auto">
-            A <strong>11ª Semana Tecnológica UCPEL</strong>, promovida pelos cursos do Centro de Ciências Sociais e Tecnológicas, será realizada entre os dias <strong>9 e 13 de novembro de 2025</strong>.  
+            A <strong>11ª Semana Tecnológica UCPEL</strong>, promovida pelos cursos do Centro de Ciências Sociais e Tecnológicas, será realizada entre os dias <strong>10 e 14 de novembro de 2025</strong>.  
             A abertura ocorrerá no auditório da Universidade Católica de Pelotas, e as demais atividades noturnas também serão transmitidas via Google Meet.
           </p>
         </div>
@@ -114,10 +114,10 @@ export function Sobre() {
           </h5>
           <p className="text-gray-200 mb-2">
             <strong>Ministrante:</strong> Henrique Völz<br />
-            <strong>Datas:</strong> 09/11 e 10/11/2025 — das 19h às 22h<br />
+            <strong>Datas:</strong> 10/11 e 11/11/2025 — das 19h às 22h<br />
             <strong>Vagas:</strong> 25 &nbsp;|&nbsp; <strong>Modalidade:</strong> Presencial<br />
             <strong>Local:</strong> Laboratório de Sistemas Embarcados (D214)<br />
-            <strong>Valor:</strong> 15,00 reais (incluso certificado)
+            <strong>Valor:</strong> R$ 15,00 (incluso certificado)
           </p>
 
           <div className="mt-4" ref={glitchCTA.ref}>

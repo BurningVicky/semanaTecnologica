@@ -5,13 +5,6 @@ import { Badge } from './ui/badge';
 export function Programacao() {
   const programacaoOficial = [
     {
-      data: '09/11/2025',
-      horario: '19h às 22h',
-      atividade: 'Minicurso de Proteção Elétrica e Ensaios de Relés de Média Tensão',
-      ministrante: 'Henrique Völz',
-      local: 'D214 / Presencial',
-    },
-    {
       data: '10/11/2025',
       horario: '19h às 22h',
       atividade: 'Minicurso de Proteção Elétrica e Ensaios de Relés de Média Tensão',
@@ -20,41 +13,48 @@ export function Programacao() {
     },
     {
       data: '11/11/2025',
+      horario: '19h às 22h',
+      atividade: 'Minicurso de Proteção Elétrica e Ensaios de Relés de Média Tensão',
+      ministrante: 'Henrique Völz',
+      local: 'D214 / Presencial',
+    },
+    {
+      data: '12/11/2025',
       horario: '19h15 às 20h30',
       atividade: 'À definir',
       ministrante: 'Ulisses Brisolara',
       local: 'Via Meet',
     },
     {
-      data: '11/11/2025',
+      data: '12/11/2025',
       horario: '20h45 às 22h',
       atividade: 'À definir',
       ministrante: 'Adenauer Yamin',
       local: 'Via Meet',
     },
     {
-      data: '12/11/2025',
+      data: '13/11/2025',
       horario: '19h15 às 20h30',
       atividade: 'À definir',
       ministrante: 'Mateus Grellert',
       local: 'Via Meet',
     },
     {
-      data: '12/11/2025',
+      data: '13/11/2025',
       horario: '20h45 às 22h',
       atividade: 'À definir',
       ministrante: 'Geelsu Hwang',
       local: 'Via Meet',
     },
     {
-      data: '13/11/2025',
+      data: '14/11/2025',
       horario: '19h15 às 20h30',
       atividade: 'Analog Design in the IP business unit at Synopsys',
       ministrante: 'Pedro Toledo',
       local: 'Híbrido / C410',
     },
     {
-      data: '13/11/2025',
+      data: '14/11/2025',
       horario: '20h45 às 22h',
       atividade: 'À definir',
       ministrante: 'Leomar Rosa',
@@ -90,16 +90,29 @@ export function Programacao() {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {programacaoOficial.map((item, index) => (
-                  <TableRow key={index}>
-                    <TableCell className="font-mono text-sm text-white">{item.data}</TableCell>
-                    <TableCell className="font-mono text-sm text-white">{item.horario}</TableCell>
-                    <TableCell className="text-white">{item.atividade}</TableCell>
-                    <TableCell className="font-conthrax text-sm text-white">{item.ministrante}</TableCell>
-                    <TableCell className="text-sm text-gray-200">{item.local}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
+  {programacaoOficial.map((item, index) => (
+                <TableRow key={index}>
+                  <TableCell className="font-mono text-sm text-white">{item.data}</TableCell>
+                  <TableCell className="font-mono text-sm text-white">{item.horario}</TableCell>
+                  <TableCell className="text-white">{item.atividade}</TableCell>
+                  <TableCell className="font-conthrax text-sm text-white">{item.ministrante}</TableCell>
+                  <TableCell className="text-sm text-gray-200">
+                    {item.local === 'Via Meet' || item.local === 'Híbrido / C410' ? (
+                      <a
+                        href="https://meet.google.com/kvg-mjkz-vsx"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-400 hover:text-blue-500 underline transition-colors"
+                      >
+                        {item.local}
+                      </a>
+                    ) : (
+                      item.local
+                    )}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
             </Table>
           </CardContent>
         </Card>

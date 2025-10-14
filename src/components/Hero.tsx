@@ -79,7 +79,7 @@ export function Hero() {
             <div className="space-y-4 mb-8">
               <div className="flex items-center space-x-3">
                 <Calendar className="text-blue-400" size={20} />
-                <span className="text-lg">9 a 13 de Novembro de 2025</span>
+                <span className="text-lg">10 a 14 de Novembro de 2025</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="text-purple-400" size={20} />

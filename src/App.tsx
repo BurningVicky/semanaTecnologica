@@ -9,7 +9,6 @@ import { Contato } from './components/Contato';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import { useGlitch, GlitchHandle } from 'react-powerglitch';
-import RippleGrid from './components/RippleGrid';
 import Prism from './components/Prism';
 
 export default function App() {
@@ -25,14 +24,14 @@ export default function App() {
         <div className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900' style={{ width: '100%', height: '100%', position: 'absolute' }}>
           <Prism
             animationType="3drotate"
-            timeScale={1}
+            timeScale={0.8}
             height={2.5}
             baseWidth={3.8}
-            scale={2.6}
-            hueShift={1}
-            colorFrequency={1}
+            scale={5}
+            hueShift={-0.34}
+            colorFrequency={0.55}
             noise={0}
-            glow={1}
+            glow={0.7}
           />
           
           {/* Overlay leve para contraste (dentro do contêiner fixo) */}
