@@ -43,7 +43,7 @@ export function Participantes() {
     },
     {
       nome: 'Mateus Grellert',
-      tema: 'A definir',
+      tema: 'Machine Learning meets Circuits and Systems',
       bio: 'Atualmente é professor adjunto da Universidade Federal do Rio Grande do Sul (UFRGS), docente permanente do Programa de Pós-Graduação em Ciência da Computação (PPGCC) da Universidade Federal de Santa Catarina (UFSC).',
       image: `${import.meta.env.BASE_URL}/img/mateus.png`,
       social: {

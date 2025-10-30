@@ -35,7 +35,7 @@ export function Programacao() {
     {
       data: '13/11/2025',
       horario: '19h15 às 20h30',
-      atividade: 'À definir',
+      atividade: 'Machine Learning meets Circuits and Systems',
       ministrante: 'Mateus Grellert',
       local: 'Via Meet',
     },
