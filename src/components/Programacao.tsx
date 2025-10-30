@@ -28,7 +28,7 @@ export function Programacao() {
     {
       data: '12/11/2025',
       horario: '20h45 às 22h',
-      atividade: 'À definir',
+      atividade: 'Reflexões Sobre Um Quarto de Século da Presença da IoT',
       ministrante: 'Adenauer Yamin',
       local: 'Via Meet',
     },

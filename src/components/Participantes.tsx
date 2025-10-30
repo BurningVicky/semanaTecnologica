@@ -25,7 +25,7 @@ export function Participantes() {
     },
     {
       nome: 'Adenauer Yamin',
-      tema: 'A definir',
+      tema: 'Reflexões Sobre Um Quarto de Século da Presença da IoT',
       bio: 'Graduação em Engenharia Elétrica pela Universidade Católica de Pelotas, mestrado e doutorado em Computação pela Universidade Federal do Rio Grande do Sul.',
       image: `${import.meta.env.BASE_URL}/img/adenauer.png`,
       social: {
