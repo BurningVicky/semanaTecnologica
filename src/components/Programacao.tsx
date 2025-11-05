@@ -21,7 +21,7 @@ export function Programacao() {
     {
       data: '12/11/2025',
       horario: '19h15 às 20h30',
-      atividade: 'À definir',
+      atividade: 'Revisitando o conceito de Inteligência Artificial em Tempos de GenAI',
       ministrante: 'Ulisses Brisolara',
       local: 'Via Meet',
     },
@@ -42,8 +42,8 @@ export function Programacao() {
     {
       data: '13/11/2025',
       horario: '20h45 às 22h',
-      atividade: 'À definir',
-      ministrante: 'Geelsu Hwang',
+      atividade: 'Biossensores Eletroquímicos Seletivos',
+      ministrante: 'Neftalí Lenin Villarreal Carreño',
       local: 'Via Meet',
     },
     {
@@ -56,7 +56,7 @@ export function Programacao() {
     {
       data: '14/11/2025',
       horario: '20h45 às 22h',
-      atividade: 'À definir',
+      atividade: 'Técnicas de Otimização em Síntese Lógica e Física Voltadas à Concepção de Circuitos Digitais',
       ministrante: 'Leomar Rosa',
       local: 'C410',
     },
@@ -99,7 +99,11 @@ export function Programacao() {
                   <TableCell className="text-sm text-gray-200">
                     {item.local === 'Via Meet' || item.local === 'Híbrido / C410' ? (
                       <a
-                        href="https://meet.google.com/kvg-mjkz-vsx"
+                        href={
+                          item.local === 'Híbrido / C410'
+                            ? 'https://meet.google.com/kcx-jysd-kct'
+                            : 'https://meet.google.com/kvg-mjkz-vsx'
+                        }
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-400 hover:text-blue-500 underline transition-colors"

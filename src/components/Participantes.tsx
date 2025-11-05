@@ -7,7 +7,7 @@ export function Participantes() {
   const participantes = [
     {
       nome: 'Ulisses Brisolara',
-      tema: 'A definir',
+      tema: 'Revisitando o Conceito de Inteligência Artificial',
       bio: 'Professor adjunto do Centro de Desenvolvimento Tecnológico da Universidade Federal de Pelotas (UFPel) e coordenador do Hub de Inovação em Inteligência Artificial (H2IA).',
       image: `${import.meta.env.BASE_URL}/img/ulisses.png`,
       social: {
@@ -16,7 +16,7 @@ export function Participantes() {
     },
     {
       nome: 'Leomar Rosa',
-      tema: 'A definir',
+      tema: 'Técnicas de Otimização em Síntese Lógica e Física',
       bio: 'Doutorado em Microeletrônica pela Universidade Federal do Rio Grande do Sul (2008) com período sanduíche na Universidade de Minnesota - EUA (2005-2006), mestrado em Ciência da Computação pela Universidade Federal do Rio Grande do Sul (2004) e graduação em Ciência da Computação pela Universidade Federal de Pelotas (2001).',
       image: `${import.meta.env.BASE_URL}/img/leomar.png`,
       social: {
@@ -33,18 +33,18 @@ export function Participantes() {
       },
     },
     {
-      nome: 'Geelsu Hwang',
-      tema: 'A definir',
-      bio: 'Associate Professor in the Department of Preventive & Restorative Sciences.',
-      image: `${import.meta.env.BASE_URL}/img/geelsu.png`,
+      nome: 'Neftalí Lênin Villarreal Carreño',
+      tema: 'Biossensores Eletroquímicos Seletivos',
+      bio: 'Professor titular da Universidade Federal de Pelotas- Engenharia de Materiais - CDTec, Professor Visitante no Massachusetts Institute of Technology (MIT), Department of Materials Science and Engineering, Estados Unidos, Novembro de 2014. Pós-doutorado, University of Surrey, Advanced Technology Institute, Reino Unido. Doutorado em Química pela Universidade Federal de São Carlos (2002), mestrado e graduação em Química pela Universidade Federal de Santa Catarina.',
+      image: `${import.meta.env.BASE_URL}/img/villarreal.png`,
       social: {
-        linkedin: 'https://www.linkedin.com/in/geelsu-hwang-8a608935/',
+        linkedin: 'https://www.linkedin.com/in/neftali-carre%C3%B1o-986566121/',
       },
     },
     {
       nome: 'Mateus Grellert',
       tema: 'Machine Learning meets Circuits and Systems',
-      bio: 'Atualmente é professor adjunto da Universidade Federal do Rio Grande do Sul (UFRGS), docente permanente do Programa de Pós-Graduação em Ciência da Computação (PPGCC) da Universidade Federal de Santa Catarina (UFSC).',
+      bio: 'Received the M.Sc. degree in Computer Science from the Federal University of Rio Grande do Sul (UFRGS), Brazil, in 2014, and the Ph.D. degree at the same University in 2018. He is an Assistant Professor at the Federal University of Rio Grande do Sul, Brazil, and part of the Microelectronics Group (GME) of the same University. He has been doing research in embedded systems solutions for more than 10 years.',
       image: `${import.meta.env.BASE_URL}/img/mateus.png`,
       social: {
         linkedin: 'https://www.linkedin.com/in/mateus-grellert/',
@@ -53,7 +53,7 @@ export function Participantes() {
     {
       nome: 'Pedro Toledo',
       tema: 'Analog Design in the IP business unit at Synopsys',
-      bio: 'Pedro Toledo (Member, IEEE) received the B.Sc. degree in electronic engineering from the Universidade Federal de Pernambuco (UFPE).',
+      bio: 'Pedro Toledo (Member, IEEE) received the B.Sc. degree in electronic engineering from the Universidade Federal de Pernambuco (UFPE), Recife, Brazil, in 2010, the M.Sc. degree in microelectronics from the Universidade Federal do Rio Grande do Sul (UFRGS), Porto Alegre, Brazil, in 2015, and the joint Ph.D. degree from the Politecnico di Torino and the Universidade Federal do Rio Grande do Sul, working with digital-based analog processing for IoT applications in 2021',
       image: `${import.meta.env.BASE_URL}/img/toledo.png`,
       social: {
         linkedin: 'https://www.linkedin.com/in/eng-pedro-toledo/',
