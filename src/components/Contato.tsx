@@ -92,7 +92,7 @@ export function Contato() {
               </CardHeader>
               <CardContent className="space-y-6 text-white">
                 {[
-                  { icon: <Mail className="text-blue-600 mt-1" size={20} />, title: 'Email', lines: ['semanatecnologica@ucpel.edu.br', 'Resposta em até 24 horas'] },
+                  { icon: <Mail className="text-blue-600 mt-1" size={20} />, title: 'Email', lines: ['vicky.bandeira@ucpel.edu.br', 'Resposta em até 24 horas'] },
                   { icon: <Phone className="text-green-600 mt-1" size={20} />, title: 'Telefone', lines: ['(53) 32123-3322', 'Segunda a sexta, 8h às 18h'] },
                   { icon: <MapPin className="text-red-600 mt-1" size={20} />, title: 'Endereço', lines: ['Rua Gonçalves Chaves, 373', 'Centro - Pelotas/RS', 'CEP: 96015-560'] },
                 ].map((item, index) => (
