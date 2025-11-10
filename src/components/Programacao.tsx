@@ -9,14 +9,14 @@ export function Programacao() {
       horario: '19h às 22h',
       atividade: 'Minicurso de Proteção Elétrica e Ensaios de Relés de Média Tensão',
       ministrante: 'Henrique Völz',
-      local: 'D214 / Presencial',
+      local: 'D202 / Presencial',
     },
     {
       data: '11/11/2025',
       horario: '19h às 22h',
       atividade: 'Minicurso de Proteção Elétrica e Ensaios de Relés de Média Tensão',
       ministrante: 'Henrique Völz',
-      local: 'D214 / Presencial',
+      local: 'D202 / Presencial',
     },
     {
       data: '12/11/2025',

@@ -116,7 +116,7 @@ export function Sobre() {
             <strong>Ministrante:</strong> Henrique Völz<br />
             <strong>Datas:</strong> 10/11 e 11/11/2025 — das 19h às 22h<br />
             <strong>Vagas:</strong> 25 &nbsp;|&nbsp; <strong>Modalidade:</strong> Presencial<br />
-            <strong>Local:</strong> Laboratório de Sistemas Embarcados (D214)<br />
+            <strong>Local:</strong> Laboratório de Sistemas Embarcados (D202)<br />
             <strong>Valor:</strong> R$ 15,00 (incluso certificado)
           </p>
 
